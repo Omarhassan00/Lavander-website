@@ -1,15 +1,1 @@
-#carousel_o{
-    height: 85vh;
-}
-#carousel_img{
-    height: 90%;
-}
-#Text_l{
-    background: linear-gradient(to top , rgb(126 34 206 / 78%) , transparent);
-}
-#Prev_R{
-    border: 6px solid #F4EAFF;
-}
-#Next_L{
-    border: 6px solid #F4EAFF;
-}
+#carousel_o{height:85vh}#carousel_img{height:90%}#Text_l{background:linear-gradient(to top,red,transparent)}#Prev_R{border:6px solid #F4EAFF}#Next_L{border:6px solid #F4EAFF}
