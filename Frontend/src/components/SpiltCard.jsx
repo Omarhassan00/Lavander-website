@@ -118,42 +118,7 @@ const SplitCard = ({ product }) => {
             />))}
           </div>
         </div>
-              {/* <ImageListItem
-                className="modal-modal-title0"
-                sx={{
-                  display: "flex",
-                  listStyle: "none",
-                  padding: "0",
-                  width: " 300px",
-                  height: " 300px !important",
-                  alignContent: "center",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  justifyItems: "center",
-                  position: "fixed",
-                  top: "80px",
-                  
-                }}
-              > 
-                <img
-                  className="Img_Modal zoom w-full"
-                  src={product.image[0]}
-                  alt="product image"
-                />
-              </ImageListItem>
-              <div className="oneimage">
-              {product.image.map((oneimage, index) => (
-                <div
-                  className="oneimage-item"
-                  key={index}>
-                <img
-                    className="Img_Modal-item zoom w-52"
-                    src={oneimage}
-                    alt={`product image ${index + 1}`}
-                />
-              </div>
-              ))}
-              </div> */}
+              
               <div className="modaltext">
               <Typography id="modal-modal-description1" sx={{ mt: 10}}>
                 {product.name}

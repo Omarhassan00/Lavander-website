@@ -44,25 +44,6 @@ const FeaturedArticle = ({ featuredArticle }) => {
               }}
             >
               {featuredArticle?.map((article) => (
-                // <div 
-                //   key={article._id}
-                //   className="w-full h-full flex-shrink-0 px-2"
-                // >
-                //   <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden h-full transition-all duration-300 hover:shadow-xl border border-purple-500/30">
-                //     <div id="carousel_img" className="overflow-hidden ">
-                //       <img
-                //         src={article.image}
-                //         alt={article.title}
-                //         className="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
-                //       />
-                //     </div>
-                //     <div id="Text_l" className="p-4">
-                //       <h3 className="text-lg font-semibold mb-2 text-purple-950">
-                //         {article.title}
-                //       </h3>
-                //     </div>
-                //   </div>
-                // </div>
                 <SpiltArticles key={article._id} article={article} />
               ))}
             </div>

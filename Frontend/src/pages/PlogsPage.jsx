@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useArticleStore } from "../stores/useArticleStore";
-// import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import Plogs from "../components/Plogs";
 import "../../public/css/plogs.css"
@@ -13,7 +12,7 @@ const PlogsPage = () => {
 		fetchAllArticles(Articles);
 	}, [fetchAllArticles , Articles]);
 
-	console.log("Articles:", Articles);
+	// console.log("Articles:", Articles);
 	return (
 		<div className='min-h-screen'>
 			<div className='relative z-10 sm:px-6 lg:px-8 py-16'>

@@ -5,7 +5,6 @@ import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-// import { ImageList } from "@mui/material";
 import ImageListItem from "@mui/material/ImageListItem";
 
 const Plogs = ({ article }) => {
@@ -140,56 +139,3 @@ const Plogs = ({ article }) => {
 };
 
 export default Plogs;
-
-// import "../../public/css/plogs.css";
-// const Plogs = ({article}) => {
-//   return (
-//     <div className="plog-container-big gap-96">
-//       <div className="plog-container">
-//         <div className="plog-card">
-//           <div className="logo-plog">
-//             <span className="circle circlr1"></span>
-//             <span className="circle circlr2"></span>
-//             <span className="circle circlr3"></span>
-//             <span className="circle circlr4"></span>
-//             <span className="circle circlr5">
-//               <i className="fa-solid fa-seedling"></i>
-//             </span>
-//           </div>
-
-//           <img
-//             className=" object-cover "
-//             src={article.image}
-//             alt="product image"
-//             />
-//           <div className="plog-glass  ">
-//             <div className="plog-glass-content">
-//               <h1>{article.title}</h1>
-//               <p>{article.description}</p>
-//             </div>
-
-//             <div className="plog-glass-FT">
-//               <div className="FT-social">
-//                 <span className="social-icons-FT">
-//                   <i className="fa-brands fa-facebook"></i>
-//                 </span>
-//                 <span className="social-icons-FT">
-//                   <i className="fa-brands fa-linkedin"></i>
-//                 </span>
-//                 <span className="social-icons-FT">
-//                   <i className="fa-brands fa-square-twitter"></i>
-//                 </span>
-//               </div>
-
-//               <div className="FT-link">
-//                 Read More <i className="fa-solid fa-arrow-up-right-square"></i>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Plogs;

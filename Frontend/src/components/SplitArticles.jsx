@@ -5,7 +5,6 @@ import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-// import { ImageList } from "@mui/material";
 import ImageListItem from "@mui/material/ImageListItem";
 
 const SpiltArticles = ({ article }) => {
@@ -88,7 +87,9 @@ const SpiltArticles = ({ article }) => {
           />
         </div>
       </Button>
-      <div id="Text_l" className="p-4 flex justify-center align-middle rounded-md  shadow-xl">
+      <div id="Text_l" className="p-4 flex justify-center align-middle rounded-md  shadow-xl"
+      style={{background:"linear-gradient(to top, rgb(137 40 203), transparent)"}}
+      >
         <h3 className="text-lg font-semibold mb-2 text-purple-950 ">
           {article.title}
         </h3>

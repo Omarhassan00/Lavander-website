@@ -2,20 +2,12 @@ import toast from "react-hot-toast";
 import { ShoppingCart } from "lucide-react";
 import { useUserStore } from "../stores/useUserStore";
 import { useCartStore } from "../stores/useCartStore";
-// import { useEffect } from "react";
-// import { useProductStore } from "../stores/useProductStore";
-// import FeaturedProducts from "../components/FeaturedProducts";
 import "../../public/css/ProductCard.css";
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-// import { ImageList } from "@mui/material";
-// import ImageListItem from "@mui/material/ImageListItem";
-// import { motion } from 'framer-motion';
-// import ReactImageMagnify from 'react-image-magnify';
-// import ReactImageZoom from 'react-image-zoom';
 
 import { useState } from 'react';
 
@@ -55,11 +47,6 @@ const ProductCard =  ({product}) => {
       addToCart(product);
     }
   };
-  // const props = {
-  //   zoomWidth: 500,
-  //   img: product.image,
-  //   className:"Img_Modal"
-  // };
   return (
     <div className="flex w-full relative flex-col overflow-hidden rounded-lg border border-gray-700 shadow-lg">
       <div
@@ -94,8 +81,7 @@ const ProductCard =  ({product}) => {
     height: "300px",
     position: "fixed",
     top: "85px",}}>
-        <img  
-        // style={{width:"100%",height:"100%"}}
+        <img 
         src={mainImage} alt="Main Product" className="Img_Modal main-image" />
       
         <div className="side-images"
@@ -128,42 +114,7 @@ const ProductCard =  ({product}) => {
           />))}
         </div>
       </div>
-            {/* <ImageListItem
-              className="modal-modal-title0"
-              sx={{
-                display: "flex",
-                listStyle: "none",
-                padding: "0",
-                width: " 300px",
-                height: " 300px !important",
-                alignContent: "center",
-                justifyContent: "center",
-                alignItems: "center",
-                justifyItems: "center",
-                position: "fixed",
-                top: "80px",
-                
-              }}
-            > 
-              <img
-                className="Img_Modal zoom w-full"
-                src={product.image[0]}
-                alt="product image"
-              />
-            </ImageListItem>
-            <div className="oneimage">
-            {product.image.map((oneimage, index) => (
-              <div
-                className="oneimage-item"
-                key={index}>
-              <img
-                  className="Img_Modal-item zoom w-52"
-                  src={oneimage}
-                  alt={`product image ${index + 1}`}
-              />
-            </div>
-            ))}
-            </div> */}
+            
             <div className="modaltext">
             <Typography id="modal-modal-description1" sx={{ mt: 10}}>
               {product.name}

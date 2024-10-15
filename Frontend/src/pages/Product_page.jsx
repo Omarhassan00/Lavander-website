@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useProductStore } from "../stores/useProductStore";
 import FeaturedProducts from "../components/FeaturedProducts";
 import "../../public/css/Brand_product.css";
+import { Link } from "react-router-dom";
 
 const Product_page = () => {
   const { fetchFeaturedProducts, products, loading } = useProductStore();
@@ -26,18 +27,16 @@ const Product_page = () => {
           </h1>
         <div className="brand-Product grid grid-cols-2 mx-auto px-4 sm:grid-cols-2 lg:grid-cols-2 gap-32 max-h-full">
 
-          <a href="/category/Lavant">
+          <Link to="/category/Lavant">
             <div className="navigation-Product">
               <div className="menuToggle-Pro"></div>
-              {/* <div className="menu"></div> */}
             </div>
-          </a>
-          <a href="/category/Lavand">
+          </Link>
+          <Link to="/category/Lavand">
             <div className="navigation-Product1">
               <div className="menuToggle1-Pro"></div>
-              {/* <div className="menu1"></div> */}
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

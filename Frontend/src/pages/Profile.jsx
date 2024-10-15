@@ -4,22 +4,9 @@ import { PlusCircle, Loader, ShieldCloseIcon, ShieldCheckIcon } from "lucide-rea
 import { useUserStore } from "../stores/useUserStore";
 import toast from "react-hot-toast";
 import BtnEditPass from "../components/BtnEditPass";
-// import { green, red } from "@mui/material/colors";
+import { Link } from "react-router-dom";
 
 const genders = ["male", "female"];
-// const style = {
-//   position: "absolute",
-//   top: "50%",
-//   left: "50%",
-//   transform: "translate(-50%, -50%)",
-//   width: 400,
-//   bgcolor: "background.paper",
-//   border: "2px solid #000",
-//   boxShadow: 24,
-//   pt: 2,
-//   px: 4,
-//   pb: 3,
-// };
 
 const Profile = () => {
   const {verifyemail , updateoneUser, loading, user } = useUserStore();
@@ -58,13 +45,6 @@ const Profile = () => {
       toast.error("error updating user");
     }
   };
-  // const [open, setOpen] = React.useState(false);
-  // const handleOpen = () => {
-  //   setOpen(true);
-  // };
-  // const handleClose = () => {
-  //   setOpen(false);
-  // };
 
   return (
     <motion.div
@@ -294,13 +274,13 @@ const Profile = () => {
             ))}
           </select>
         </div>
-        <a
-         className="w-full flex justify-center px-4 border border-transparent rounded-md cursor-pointer
+        <Link
+         clLinkssName="w-full flex justify-center px-4 border border-transparent rounded-md cursor-pointer
          shadow-sm text-sm font-medium text-white bg-purple-600 hover:bg-purple-700 
          focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 disabled:opacity-50"
           >
             <BtnEditPass email = {user.email}/>
-        </a>
+        </Link>
         <button
           type="submit"
           className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md 

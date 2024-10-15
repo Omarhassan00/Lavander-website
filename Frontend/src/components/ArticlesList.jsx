@@ -14,7 +14,7 @@ const ArticlesList = () => {
     setShowUpdateForm(true);
   };
 
-  console.log("articles", Articles);
+  // console.log("articles", Articles);
 
   return (
     <motion.div

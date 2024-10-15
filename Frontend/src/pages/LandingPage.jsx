@@ -23,11 +23,12 @@ const LandingPage = () => {
   <div className="cont_btn">
     <motion.div 
     className='flex flex-col justify-center align-middle text-span sm:mx-auto sm:w-full sm:max-w-md'
-    initial={{ opacity: 0, y: -50 }}
-    animate={{ opacity: 1, y: 0 }}
+    initial={{ opacity: 0, x: -200 }}
+    animate={{ opacity: 1, x: 0 }}
     transition={{ duration: 0.8 }}
     >
-      <span style={{color: "rgb(106, 0, 204)",fontWeight:" 600",paddingBottom: "10px", fontSize: "2rem",textShadow: "-1px -1px 0px #fff",}}>Lavander life</span> 
+      <span style={{color: "#6E4A96",fontWeight:" 900",letterSpacing: "7px",paddingBottom: "8px",marginBottom: "16px",fontSize: "3rem",borderBottom:" 3px double",
+      }}>Lavander life</span> 
       <span className="s-span">
       Lavander life has a wide array of International Products which meet the style and colour with perfection
       The company has a diverse product range of bags, wallets, shoces and Leather goods.
@@ -36,8 +37,8 @@ const LandingPage = () => {
     <br />
     <motion.div
     className='button flex justify-center align-middle mt-8 sm:mx-auto sm:w-full sm:max-w-md'
-    initial={{ opacity: 0, y: 50 }}
-    animate={{ opacity: 1, y: 0 }}
+    initial={{ opacity: 0, x: 200 }}
+    animate={{ opacity: 1, x: 0 }}
     transition={{ duration: 0.8, delay: 0.2 }}
     >
     <button 

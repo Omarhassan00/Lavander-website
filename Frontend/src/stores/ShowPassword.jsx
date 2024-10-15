@@ -1,19 +1,19 @@
 import "../../public/css/Login.css";
 const ShowPassword = () => {
-  let beam = document.querySelector(".beam");
-  document.addEventListener("mousemove", (event) => {
-    let mouseY = event.clientY;
-    let rotationRange = 8;
-    let rotationAngle =
-      (mouseY / window.innerHeight) * rotationRange - rotationRange / 2;
-    beam.style.transform = `translate(0%, -50%) rotate(${-rotationAngle}deg)`;
-  });
+  // let beam = document.querySelector(".beam");
+  // document.addEventListener("mousemove", (event) => {
+  //   let mouseY = event.clientY;
+  //   let rotationRange = 8;
+  //   let rotationAngle =
+  //     (mouseY / window.innerHeight) * rotationRange - rotationRange / 2;
+  //   beam = `${(-rotationAngle)}`;
+  // });
   
   return(
 
     <div className="light">
       <span onClick={() => {
-        const toggle = (btn) => {
+        const Tggle = (btn) => {
             const password = document.getElementById("password");
             if (btn.innerText == "visibility_off") {
               password.setAttribute("type", "text");
@@ -24,16 +24,16 @@ const ShowPassword = () => {
               // password.style.color = "white";
               btn.innerText = "visibility_off";
             }
-            beam.classList.toggle("on");
+            // beam.classList.toggle("on");
           };
 
-          toggle(document.querySelector(".material-icons-outlined"));
+          Tggle(document.querySelector(".material-icons-outlined"));
 
       }} className="material-icons-outlined">
         visibility_off
       </span>
 
-      <div className="beam"></div>
+      {/* <div className="beam"></div> */}
     </div>
 
 );

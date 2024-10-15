@@ -14,7 +14,7 @@ const OrdersList = () => {
     setShowOrderForm(true);
   };
 
-  console.log("orders", orders);
+  // console.log("orders", orders);
 
   return (
     <motion.div

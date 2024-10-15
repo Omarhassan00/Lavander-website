@@ -2,9 +2,9 @@ import "../../public/css/Contact-Us.css";
 import { useState } from "react";
 import { useUserStore } from "../stores/useUserStore";
 import { Loader, Send } from "lucide-react";
-// import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
+
 const ContactUs = () => {
-  // const notify = () => toast.success("Thank you for your message!");
   const [formData, setFormData] = useState({
     fullname: "",
     email: "",
@@ -70,24 +70,24 @@ const ContactUs = () => {
           <h2 className="txt">Connect With Us</h2>
           <ul className="sci">
             <li>
-              <a href="https://www.facebook.com/maidarawe?mibextid=ZbWKwL">
+              <Link to={"https://www.facebook.com/maidarawe?mibextid=ZbWKwL"}>
                 <i className="fa-brands fa-facebook-f"></i>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="https://www.tiktok.com/@lavanderlifeexporting?_t=8piAmaKUfNB&_r=1">
+              <Link to={"https://www.tiktok.com/@lavanderlifeexporting?_t=8piAmaKUfNB&_r=1"}>
                 <i className="fa-brands fa-tiktok"></i>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="https://www.instagram.com/lavendermarketing634?igsh=YzAwZjE1ZTI0Zg==">
+              <Link to={"https://www.instagram.com/lavendermarketing634?igsh=YzAwZjE1ZTI0Zg=="}>
                 <i className="fa-brands fa-instagram"></i>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/lavender-life-exporting-3145852b4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+              <Link to={"https://www.linkedin.com/in/lavender-life-exporting-3145852b4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"}>
                 <i className="fa-brands fa-linkedin-in"></i>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

@@ -1,4 +1,5 @@
 import "../../public/css/Footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -8,29 +9,29 @@ const Footer = () => {
           {/* <div className="footer-col">
                     <h4>Career</h4>
                     <ul>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">our services</a></li>
-                        <li><a href="#">privacy policy</a></li>
-                        <li><a href="#">affiliate program</a></li>
+                        <li><Link to={"#"}>about us</Link></li>
+                        <li><Link to={"#"}>our services</Link></li>
+                        <li><Link to={"#"}>privacy policy</Link></li>
+                        <li><Link to={"#"}>affiliate program</Link></li>
                     </ul>
                 </div> */}
           <div className="footer-col">
             <h4>company</h4>
             <ul>
               <li>
-                <a href="/">Home Page</a>
+                <Link to={"/"}>Home Page</Link>
               </li>
               <li>
-                <a href="/Plogs">Articals</a>
+                <Link to={"/Plogs"}>Articals</Link>
               </li>
               <li>
-                <a href="/product_page">Product</a>
+                <Link to={"/product_page"}>Product</Link>
               </li>
               <li>
-                <a href="/About">About Us</a>
+                <Link to={"/About"}>About Us</Link>
               </li>
               <li>
-                <a href="/ContactUs">Contact Us</a>
+                <Link to={"/ContactUs"}>Contact Us</Link>
               </li>
             </ul>
           </div>
@@ -38,13 +39,13 @@ const Footer = () => {
             <h4>Carrer</h4>
             <ul>
               <li>
-                <a href="#">Recrutments</a>
+                <Link to={"#"}>Recrutments</Link>
               </li>
               <li>
-                <a href="#">Training</a>
+                <Link to={"#"}>Training</Link>
               </li>
               <li>
-                <a href="#">Internship</a>
+                <Link to={"#"}>Internship</Link>
               </li>
             </ul>
           </div>
@@ -52,28 +53,28 @@ const Footer = () => {
             <h4>online shop</h4>
             <ul>
               <li>
-                <a href="/category/Lavant">LAVANT</a>
+                <Link to={"/category/Lavant"}>LAVANT</Link>
               </li>
               <li>
-                <a href="/category/Lavand">LAVAND</a>
+                <Link to={"/category/Lavand"}>LAVAND</Link>
               </li>
             </ul>
           </div>
           <div className="footer-col">
             <h4>follow us</h4>
             <div className="social-links">
-              <a href="https://www.facebook.com/maidarawe?mibextid=ZbWKwL">
+              <Link to={"https://www.facebook.com/maidarawe?mibextid=ZbWKwL"}>
                 <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/lavender-life-exporting-3145852b4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+              </Link>
+              <Link to={"https://www.linkedin.com/in/lavender-life-exporting-3145852b4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"}>
                 <i className="fab fa-linkedin"></i>
-              </a>
-              <a href="https://www.instagram.com/lavendermarketing634?igsh=YzAwZjE1ZTI0Zg==">
+              </Link>
+              <Link to={"https://www.instagram.com/lavendermarketing634?igsh=YzAwZjE1ZTI0Zg=="}>
                 <i className="fab fa-instagram"></i>
-              </a>
-              <a href="https://www.tiktok.com/@lavanderlifeexporting?_t=8piAmaKUfNB&_r=1">
+              </Link>
+              <Link to={"https://www.tiktok.com/@lavanderlifeexporting?_t=8piAmaKUfNB&_r=1"}>
                 <i className="fab fa-tiktok"></i>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -40,7 +40,7 @@ const Navbar = () => {
 					   >
 						<nav className=" flex flex-nowrap justify-between flex-row gap-6 text-center h-12 max-w-xl items-center">
 						<Link
-							to={"/"}
+							to='/'
 							className='text-black hover:text-purple-400 transition duration-300
 					 ease-in-out'
 					 onClick={() => {window.onload()}}
@@ -48,7 +48,7 @@ const Navbar = () => {
 							Home
 						</Link>
 						<Link
-							to={"/Plogs"}
+							to='/Plogs'
 							className='text-black hover:text-purple-400 transition duration-300
 					 ease-in-out'
 					 onClick={() => {window.onload()}}
@@ -56,7 +56,7 @@ const Navbar = () => {
 							Articals
 						</Link>
 						<Link
-							to={"/product_page"}
+							to='/product_page'
 							className='text-black hover:text-purple-400 transition duration-300
 					 ease-in-out'
 					 onClick={() => {window.onload()}}
@@ -64,7 +64,7 @@ const Navbar = () => {
 							Product
 						</Link>
 						<Link
-							to={"/About"}
+							to='/About'
 							className='text-black hover:text-purple-400 transition duration-300
 					 ease-in-out'
 					onClick={() => {window.onload()}}
@@ -72,7 +72,7 @@ const Navbar = () => {
 							About
 						</Link>
 						<Link
-							to={"/ContactUs"}
+							to='/ContactUs'
 							className='text-black hover:text-purple-400 transition duration-300
 					 ease-in-out'
 					 onClick={() => {window.onload()}}
@@ -133,7 +133,7 @@ const Navbar = () => {
 							<div 
 							className="All_btn_user"
 							>
-								<a href="/Profile">
+								<Link to={"/Profile"}>
 								<button
 								className="Btn_user bg-purple-700 hover:bg-purple-500"
 								onClick={() => {window.onload()}}
@@ -141,8 +141,8 @@ const Navbar = () => {
 								<UserCircle2 size={18} />
 									<span>Profile</span>
 									</button>
-									</a>
-									<a href="/History">
+									</Link>
+									<Link to={"/History"}>
 								<button
 									className="Btn_user bg-purple-700 hover:bg-purple-500"
 									onClick={() => {window.onload()}}
@@ -150,9 +150,9 @@ const Navbar = () => {
 									<BookMarked size={18} />
 									<span>History</span>
 								</button>
-								</a>
+								</Link>
 								<Link
-								to={"/"}
+								to='/'
 								onClick={logout}
 								>
 								<button

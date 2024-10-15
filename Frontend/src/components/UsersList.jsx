@@ -14,7 +14,7 @@ const UsersList = () => {
     setShowUpdateForm(true);
   };
 
-  console.log("users", users);
+  // console.log("users", users);
 
   return (
     <motion.div

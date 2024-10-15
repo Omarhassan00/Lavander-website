@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { useArticleStore } from "../stores/useArticleStore";
 import FeaturedArticle from "../components/FeaturedArticle";
-// import { motion } from "framer-motion";
 import "../../public/css/bloggar.css";
 import "../../public/css/Home.css";
 import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const { fetchFeaturedArticles, Articles, isLoading } = useArticleStore();
@@ -12,76 +12,21 @@ const HomePage = () => {
   useEffect(() => {
     fetchFeaturedArticles();
   }, [fetchFeaturedArticles]);
-  console.log(Articles)
+  // console.log(Articles)
   return (
     <div
     onClick = { () => {
       Navbar.menuBtn
     }}
     >
-      {/* <section 
-      onClick={() => {
-        const btns = document.querySelectorAll(".nav-btn");
-        const slides = document.querySelectorAll(".video-slide");
-        const contents = document.querySelectorAll(".content");
-    
-        var sliderNav = function (manual) {
-          btns.forEach((btn) => {
-            btn.classList.remove("active");
-          });
-          slides.forEach((slide) => {
-            slide.classList.remove("active");
-          });
-          contents.forEach((content) => {
-            content.classList.remove("active");
-          });
-    
-          btns[manual].classList.add("active");
-          slides[manual].classList.add("active");
-          contents[manual].classList.add("active");
-        };
-        btns.forEach((btn, i) => {
-          btn.addEventListener("click", () => {
-            sliderNav(i);
-          });
-        });
-      }}
-      className="home">
-        <video
-          className="video-slide active"
-          src="../../public/img/lavander ex.mp4"
-          autoPlay
-          muted
-          loop
-        ></video>
-        <div className="content active">
-          <h1>
-            Wonderful.
-            <br />
-            <span>Lavander</span>
-          </h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque
-            pariatur, velit harum sed ad vero aperiam suscipit commodi
-            voluptates maxime.
-          </p>
-          <a href="">Read More</a>
-        </div>
-        
-        <div className="slider-big-nav">
-          <div className="nav-btn active"></div>
-        </div>
-      </section> */}
-     
-      
               {!isLoading && Articles.length > 0 && (
           <FeaturedArticle featuredArticle={Articles} />
         )}
         
       <div className="media-icon">
-      <a href="https://www.facebook.com/maidarawe?mibextid=ZbWKwL"></a>
-          <a href="https://www.instagram.com/lavendermarketing634?igsh=YzAwZjE1ZTI0Zg=="></a>
-          <a href="https://www.tiktok.com/@lavanderlifeexporting?_t=8piAmaKUfNB&_r=1"></a>
+      <Link to="https://www.facebook.com/maidarawe?mibextid=ZbWKwL"></Link>
+          <Link to="https://www.instagram.com/lavendermarketing634?igsh=YzAwZjE1ZTI0Zg=="></Link>
+          <Link to="https://www.tiktok.com/@lavanderlifeexporting?_t=8piAmaKUfNB&_r=1"></Link>
         </div>
       <div className="brand-nav">
         <div className="navigation-brand">
@@ -95,17 +40,17 @@ const HomePage = () => {
           <div className="menu">
             <ul>
               <li className="--i:0.1s">
-              <a href="/Lavant/Male">
+              <Link to="/Lavant/Male">
                   <img src="../../public/img/icons8-man-100.png" alt="man" />
-                </a>
+                </Link>
               </li>
               <li className="--i:0.2s">
-              <a href="/Lavant/Female">
+              <Link to="/Lavant/Female">
                   <img
                     src="../../public/img/icons8-businesswoman-100 (1).png"
                     alt="Woman"
                   />
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -127,17 +72,17 @@ const HomePage = () => {
           <div className="menu1">
             <ul>
               <li className="--i:0.1s">
-              <a href="/Lavand/Male">
+              <Link to="/Lavand/Male">
                   <img src="../../public/img/icons8-man-100.png" alt="man" />
-                </a>
+                </Link>
               </li>
               <li className="--i:0.2s">
-              <a href="/Lavand/Female">
+              <Link to="/Lavand/Female">
                   <img
                     src="../../public/img/icons8-businesswoman-100 (1).png"
                     alt=""
                   />
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -171,34 +116,34 @@ const HomePage = () => {
           <div
             className="img img1"
             style={{
-              backgroundImage: `url('../../public/img/view-3d-businessman.jpg')`,
+              backgroundImage: `url('../../public/img/v4QYHc8WS3Ku7YTfX3kBXQ.png')`,
             }}
           ></div>
           <div
             className="img img2"
             style={{
-              backgroundImage: `url('../../public/img/backschool.jpg')`,
+              backgroundImage: `url('../../public/img/the-process-of-manufacturing-leather-in-shoes-sAy2lp-9SnKWdkdVORmi_w-HDJiD1b7SxSgdBrXZsLu7A.jpeg')`,
             }}
           ></div>
           <div
             className="img img3"
             style={{
-              backgroundImage: `url('../../public/img/view-3d-school-girl.jpg')`,
+              backgroundImage: `url('../../public/img/bVla81QrRa-PYIQF68oyeg.png')`,
             }}
           ></div>
           <div
             className="img img4"
             style={{
-              backgroundImage: `url('../../public/img/view-3d-man-dish-washing.jpg')`,
+              backgroundImage: `url('../../public/img/0f9w-awdTQCaFSppdUe4wg.png')`,
             }}
           ></div>
           <div
             className="img img5"
             style={{
-              backgroundImage: `url('../../public/img/3d-cartoon-back-school.jpg')`,
+              backgroundImage: `url('../../public/img/frfNzcf5Tt2RH334kuy1Mg.png')`,
             }}
           ></div>
-          <div
+          {/* <div
             className="img img6"
             style={{
               backgroundImage: `url('../../public/img/view-3d-businessman_23-2150709872.jpg')`,
@@ -215,7 +160,7 @@ const HomePage = () => {
             style={{
               backgroundImage: `url('../../public/img/view-3d-shocked-man-with-mouth-wide-open.jpg')`,
             }}
-          ></div>
+          ></div> */}
         </div>
       </div>
     </div>
