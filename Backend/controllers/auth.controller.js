@@ -2,10 +2,7 @@ import { redis } from "../lib/redis.js";
 import User from "../models/user.model.js";
 import jwt from "jsonwebtoken";
 import Order from "../models/order.model.js";
-// import { createTransport } from "nodemailer";
-// import SibApiV3Sdk from "sib-api-v3-sdk";
 import SibApiV3Sdk from "sib-api-v3-sdk";
-// import tranEmailApi from "../server.js"
 import bcrypt from "bcryptjs";
 
 
@@ -67,8 +64,8 @@ export const signup = async (req, res) => {
 			message: "Please Check your Email"
 		});
 	} catch (error) {
-		console.log("Error in signup controller", error.message);
-		res.status(500).json({ message: error.message });
+		console.log("Error in signup controller");
+		res.status(500).json({ message: "server error"});
 	}
 };
 
@@ -125,8 +122,6 @@ export const sendverifyEmail = async (req , res) => {
 
 	}
 	catch(error){
-		console.log(error)
-
 		res.status(500).json({message : "email not sent"});
 	}
 
@@ -145,7 +140,6 @@ export const checkverifyEmail = async (req, res) => {
 		await user.save();
 		res.status(200).redirect(process.env.CLIENT_URL);
 	} catch (error) {
-		console.log(error);
 		res.status(500).json({ message: "Error verifying account" });
 	}
 }
@@ -170,8 +164,8 @@ export const login = async (req, res) => {
 			res.status(400).json({ message: "Invalid email or password" });
 		}
 	} catch (error) {
-		console.log("Error in login controller", error.message);
-		res.status(500).json({ message: error.message });
+		console.log("Error in login controller");
+		res.status(500).json({ message: "server error"});
 	}
 };
 
@@ -187,8 +181,8 @@ export const logout = async (req, res) => {
 		res.clearCookie("refreshToken");
 		res.json({ message: "Logged out successfully" });
 	} catch (error) {
-		console.log("Error in logout controller", error.message);
-		res.status(500).json({ message: "Server error", error: error.message });
+		console.log("Error in logout controller");
+		res.status(500).json({ message: "Server error"});
 	}
 };
 
@@ -219,8 +213,8 @@ export const refreshToken = async (req, res) => {
 
 		res.json({ message: "Token refreshed successfully" });
 	} catch (error) {
-		console.log("Error in refreshToken controller", error.message);
-		res.status(500).json({ message: "Server error", error: error.message });
+		console.log("Error in refreshToken controller");
+		res.status(500).json({ message: "Server error"});
 	}
 };
 
@@ -232,7 +226,7 @@ export const getProfile = async (req, res) => {
 		}
 		res.json(req.user);
 	} catch (error) {
-		res.status(500).json({ message: "Server error", error: error.message });
+		res.status(500).json({ message: "Server error"});
 	}
 };
 
@@ -314,8 +308,8 @@ export const userhistory = async (req, res) => {
 		const orders = await Order.find({ user: req.user._id });
 		res.json(orders);
 	} catch (error) {
-		console.log("Error in history controller", error.message);
-		res.status(500).json({ message: "Server error", error: error.message });
+		console.log("Error in history controller");
+		res.status(500).json({ message: "Server error"});
 	}
 };
 
@@ -324,7 +318,7 @@ export const getAllusers = async (req, res) => {
 		const users = await User.find({}).select("-password"); // find all users
 		res.json({ users });
 	} catch (error) {
-		console.log("Error in getAllusers controller", error.message);
+		console.log("Error in getAllusers controller");
 		res.status(500).json({ message: "Server error" });
 	}
 };
@@ -354,7 +348,7 @@ export const updateuserpass = async (req, res) => {
 		res.status(200).json({ message: "password updated succesfully" });
 	} catch (error) {
 		console.log("Error in updateuserpassword controller");
-		res.status(500).json({ message: error.message });
+		res.status(500).json({ message: "server error"});
 	}
 
 }
@@ -381,8 +375,6 @@ export const sendemail = async (req, res) => {
 		res.status(200).send("email sent")
 	}
 	catch (error) {
-		console.log(error)
-
 		res.status(500).send("email not sent" + error)
 	}
 
@@ -401,7 +393,6 @@ export const forgetmypassword = async (req, res) => {
 	}
 
 	const random_pass = Math.random().toString(36).substring(2, 8).toUpperCase()
-	// const random_pass = "12345678"
 	console.log(random_pass)
 	user.password = random_pass
 	await user.save()
@@ -426,24 +417,6 @@ export const forgetmypassword = async (req, res) => {
 
 	}
 	catch(error){
-		console.log(error)
 		res.status(500).json({message: "email not sent"})
 	}
 }
-
-// export const verifyEmail = async (req, res) => {
-// 	const verificationToken = req.params.token;
-// 	try {
-// 	  const decoded = jwt.verify(verificationToken, process.env.VERIFICATION_TOKEN_SECRET);
-// 	  const user = await User.findById(decoded.userId);
-// 	  if (!user) {
-// 		return res.status(404).json({ message: "User  not found" });
-// 	  }
-// 	  user.verified = true;
-// 	  await user.save();
-// 	  res.status(200).json({ message: "Account verified successfully" });
-// 	} catch (error) {
-// 	  console.log(error);
-// 	  res.status(500).json({ message: "Error verifying account" });
-// 	}
-//   };

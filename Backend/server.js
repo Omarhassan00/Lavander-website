@@ -6,7 +6,6 @@ import path from "path";
 import authRoutes from "./routes/auth.route.js";
 import productRoutes from "./routes/product.route.js";
 import cartRoutes from "./routes/cart.route.js";
-// import couponRoutes from "./routes/coupon.route.js";
 import paymentRoutes from "./routes/payment.route.js";
 import analyticsRoutes from "./routes/analytics.route.js";
 import articalroute from "./routes/artical.route.js";
@@ -25,7 +24,6 @@ const clint = SibApiV3Sdk.ApiClient.instance;
 const apiKey = clint.authentications['api-key'];
 apiKey.apiKey = process.env.Secret_Mail_Key;
 
-// const tranEmailApi = new SibApiV3Sdk.TransactionalEmailsApi();
 
 
 const __dirname = path.resolve();
@@ -36,7 +34,6 @@ app.use(cookieParser());
 app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/cart", cartRoutes);
-// app.use("/api/coupons", couponRoutes);
 app.use("/api/payments", paymentRoutes);
 app.use("/api/analytics", analyticsRoutes);
 app.use("/api/articles", articalroute);
@@ -54,5 +51,3 @@ app.listen(PORT, () => {
 	console.log("Server is running on http://localhost:" + PORT);
 	connectDB();
 });
-
-// export default tranEmailApi

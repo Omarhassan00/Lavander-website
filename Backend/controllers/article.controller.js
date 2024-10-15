@@ -7,8 +7,8 @@ export const getAllarticles = async (req, res) => {
 		const articles = await article.find({}); // find all articles
 		res.json({ articles });
 	} catch (error) {
-		console.log("Error in getAllarticles controller", error.message);
-		res.status(500).json({ message: "Server error", error: error.message });
+		console.log("Error in getAllarticles controller");
+		res.status(500).json({ message: "Server error"});
 	}
 };
 
@@ -19,23 +19,19 @@ export const getFeaturedarticles = async (req, res) => {
 			return res.json(JSON.parse(featuredarticles));
 		}
 
-		// if not in redis, fetch from mongodb
-		// .lean() is gonna return a plain javascript object instead of a mongodb document
-		// which is good for performance
 		featuredarticles = await article.find({ isFeatured: true }).lean();
 
 		if (!featuredarticles) {
 			return res.status(404).json({ message: "No featured articles found" });
 		}
 
-		// store in redis for future quick access
 
 		await redis.set("featured_articles", JSON.stringify(featuredarticles));
 
 		res.json(featuredarticles);
 	} catch (error) {
-		console.log("Error in getFeaturedarticles controller", error.message);
-		res.status(500).json({ message: "Server error", error: error.message });
+		console.log("Error in getFeaturedarticles controller");
+		res.status(500).json({ message: "Server error"});
 	}
 };
 
@@ -58,8 +54,8 @@ export const createarticle = async (req, res) => {
 
 		res.status(201).json(newarticle);
 	} catch (error) {
-		console.log("Error in createarticle controller", error.message);
-		res.status(500).json({ message: "Server error", error: error.message });
+		console.log("Error in createarticle controller");
+		res.status(500).json({ message: "Server error"});
 	}
 };
 
@@ -77,7 +73,7 @@ export const deletearticle = async (req, res) => {
 				await cloudinary.uploader.destroy(`articles/${publicId}`);
 				console.log("deleted image from cloduinary");
 			} catch (error) {
-				console.log("error deleting image from cloduinary", error);
+				console.log("error deleting image from cloduinary");
 			}
 		}
 
@@ -86,8 +82,8 @@ export const deletearticle = async (req, res) => {
 
 		res.json({ message: "article deleted successfully" });
 	} catch (error) {
-		console.log("Error in deletearticle controller", error.message);
-		res.status(500).json({ message: "Server error", error: error.message });
+		console.log("Error in deletearticle controller");
+		res.status(500).json({ message: "Server error"});
 	}
 };
 
@@ -109,8 +105,8 @@ export const getRecommendedarticles = async (req, res) => {
 
 		res.json(articles);
 	} catch (error) {
-		console.log("Error in getRecommendedarticles controller", error.message);
-		res.status(500).json({ message: "Server error", error: error.message });
+		console.log("Error in getRecommendedarticles controller");
+		res.status(500).json({ message: "Server error"});
 	}
 };
 
@@ -121,8 +117,8 @@ export const getarticlesByID = async (req, res) => {
 		const articles = await article.findOne(id);
 		res.json({ articles });
 	} catch (error) {
-		console.log("Error in getarticlesByid controller", error.message);
-		res.status(500).json({ message: "Server error", error: error.message });
+		console.log("Error in getarticlesByid controller");
+		res.status(500).json({ message: "Server error"});
 	}
 };
 
@@ -138,14 +134,13 @@ export const toggleFeaturedarticle = async (req, res) => {
 			res.status(404).json({ message: "article not found" });
 		}
 	} catch (error) {
-		console.log("Error in toggleFeaturedarticle controller", error.message);
+		console.log("Error in toggleFeaturedarticle controller");
 		res.status(500).json({ message: "Server error" });
 	}
 };
 
 async function updateFeaturedarticlesCache() {
 	try {
-		// The lean() method  is used to return plain JavaScript objects instead of full Mongoose documents. This can significantly improve performance
 
 		const featuredarticles = await article.find({ isFeatured: true }).lean();
 		await redis.set("featured_articles", JSON.stringify(featuredarticles));
@@ -175,7 +170,7 @@ export const updatearticle = async (req, res) => {
 
 		res.status(200).json(uparticle);
 	} catch (error) {
-		console.log("Error in updatearticle controller", error.message);
+		console.log("Error in updatearticle controller");
 		res.status(500).json({ message: "Server error" });
 	}
 };
