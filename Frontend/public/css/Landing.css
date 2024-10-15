@@ -1,0 +1,333 @@
+* {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container-door {
+    width: 100vw !important;
+    min-height: 100vh;
+    /* background: radial-gradient(circle at 50%, transparent, #333 40%, #333 38%, #62d 139%), url(./img/conatiner-bg-new.jpg) fixed center center; */
+    background: radial-gradient(circle at 50%, transparent, #333 0%, #333 38%, #62d 139%), url(./img/conatiner-bg-new.jpg) fixed center center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: container-color .8s 8s 3 linear forwards;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    /* animation-range: 0 3; */
+    /* animation-delay: 9s; */
+    z-index: 20;
+}
+
+@keyframes container-color {
+    0% {
+        background: radial-gradient(circle at 50%, transparent, #333 0%, #333 38%, #62d 139%), url(./img/conatiner-bg-new.jpg) fixed center center;
+    }
+
+    20% {
+        background: radial-gradient(circle at 50%, transparent, #333 10%, #333 38%, #62d 139%), url(./img/conatiner-bg-new.jpg) fixed center center;
+    }
+
+    40% {
+        background: radial-gradient(circle at 50%, transparent, #333 20%, #333 38%, #62d 139%), url(./img/conatiner-bg-new.jpg) fixed center center;
+    }
+
+    60% {
+        background: radial-gradient(circle at 50%, transparent, #333 25%, #333 38%, #62d 139%), url(./img/conatiner-bg-new.jpg) fixed center center;
+    }
+
+    80% {
+        background: radial-gradient(circle at 50%, transparent, #333 35%, #333 38%, #62d 139%), url(./img/conatiner-bg-new.jpg) fixed center center;
+    }
+
+    100% {
+        background: radial-gradient(circle at 50%, transparent, #333 40%, #333 38%, #62d 139%), url(./img/conatiner-bg-new.jpg) fixed center center;
+    }
+}
+
+.container-door .door-txt {
+    width: 150px;
+    height: 150px;
+    margin-top: 315px;
+    /* background: #000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 1px 1px 10px #313131, -1px -1px 20px #313131, 2px 2px 30px #313131, -2px -2px 40px #313131, 3px 3px 50px #eee; */
+    /* border-radius: 50%; */
+    /* border: 2px solid #62d; */
+    background: repeating-conic-gradient(from var(--a), #ffed4e 0%, #a052ff 10%, transparent 10%, transparent 50%);
+    position: relative;
+    animation: AnimeCard 6s linear infinite;
+    transform: rotate(45deg);
+    /* animation-delay: 10s; */
+    /* z-index: 5; */
+}
+
+.container-door .door-txt::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(from var(--a), #4a00a3 0%, #ffed4e 10%, transparent 10%, transparent 50%);
+    animation: AnimeCard 6s linear infinite;
+    animation-delay: -1.5s;
+    
+    /* animation-delay: 10s; */
+
+    /* z-index: 5; */
+}
+
+.container-door .door-txt::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: #313131;
+    /* animation: AnimeColor 6s linear forwards; */
+    /* z-index: 2; */
+}
+
+.container-door .door-txt b {
+    position: absolute;
+    inset: 25px;
+    background: radial-gradient(circle at 50%, transparent, #333 40%, #333 38%, #62d 139%);
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: AnimeCard 6s linear infinite;
+    transform: rotate(47deg);
+    /* animation: AnimeColor 0.3s linear infinite; */
+}
+.container-door .door-txt b::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(from var(--a), #4a00a3 0%, #ffed4e 10%, transparent 10%, transparent 50%);
+    animation: AnimeCard 6s linear infinite;
+    animation-delay: -1.5s;
+}
+.container-door .door-txt b::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: #313131;
+}
+
+
+@keyframes AnimeColor {
+    0% {
+        background: radial-gradient(circle at 50%, transparent, #62d 0%, #ffde4c 0%, #62d 89%);
+    }
+    20% {
+        background: radial-gradient(circle at 50%, transparent, #62d 10%, #ffde4c 10%, #62d 99%);
+    }
+
+    40% {
+        background: radial-gradient(circle at 50%, transparent, #ffde4c 20%, #62d 20%, #ffde4c 109%);
+    }
+
+    60% {
+        background: radial-gradient(circle at 50%, transparent, #62d 25%, #ffde4c 25%, #62d 119%);
+    }
+
+    80% {
+        background: radial-gradient(circle at 50%, transparent, #ffde4c 35%, #62d 30%, #ffde4c 129%);
+    }
+
+    100% {
+        background: radial-gradient(circle at 50%, transparent, #62d 40%, #ffde4c 38%, #62d 139%);
+    }
+}
+
+@property --a {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes AnimeCard {
+    0% {
+        --a: 0deg;
+    }
+
+    100% {
+        --a: 360deg;
+    }
+}
+
+/* .container-door .door-txt b{
+    width: 138px;
+    height: 138px;
+    background: rgba(103, 34, 221, 0.588);
+    
+    border: 5px solid transparent;
+    outline: none;
+} */
+.container-door .door-txt h2 {
+    font-size: 1.1em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-align: center;
+    color: rgb(226, 255, 255);
+    position: absolute;
+    z-index: 10;
+    transform: rotate(-91deg);
+}
+
+.container-door .land-bg-container {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    /* background: linear-gradient(to right, rgba(2, 2, 1, 0.71), rgb(0 0 0 / 20%), rgba(2, 2, 1, 0.70)),
+        linear-gradient(to top, rgb(2 2 1 / 30%), transparent, rgb(0 0 0 / 30%)), url(./img/Untitled.jpg) fixed center center; */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.container-door .land-bg-container .land-bg1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(2, 2, 1, 0.819), rgba(0, 0, 0, 0.274)),
+        linear-gradient(to top, rgba(2, 2, 1, 0.462), transparent, rgb(0 0 0 / 30%)), url(./img/bag-one.png)center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: bag-one 5s linear forwards;
+    animation-delay: 5s;
+}
+
+@keyframes bag-one {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-35%);
+    }
+}
+
+.container-door .land-bg-container .land-bg2 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(2, 2, 1, 0.819), rgba(0, 0, 0, 0.274)),
+        linear-gradient(to top, rgba(2, 2, 1, 0.462), transparent, rgb(0 0 0 / 30%)), url(./img/bag-two.png)center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: bag-two 5s linear forwards;
+    animation-delay: 5s;
+}
+
+@keyframes bag-two {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(35%);
+    }
+}
+
+.container-door .land-door1 {
+    position: absolute;
+    top: 0px;
+    left: 0 !important;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(2, 2, 2), rgba(0, 0, 0, 0)),
+        url(./img/door1-new-new.jpg)center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 10;
+    animation: door-one 5s linear forwards;
+}
+
+/* .container-door .land-door1 { }*/
+
+@keyframes door-one {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-35%);
+    }
+}
+
+.container-door .land-door2 {
+    position: absolute;
+    top: 0px;
+    right: 0 !important;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(2, 2, 2), rgba(0, 0, 0, 0)),
+        url(./img/door2-new-new.jpg)center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 10;
+    animation: door-two 5s linear forwards;
+}
+
+@keyframes door-two {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(35%);
+    }
+}
+
+/* .land-bg-container .land-bg1{
+    width: 375px;
+    height: 350px;
+    background: #425451;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.land-bg-container .land-bg1 .image{
+    width: 150px;height: 150px;
+    background: #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+    color: aliceblue;
+    align-items: center;
+}
+.land-bg-container .land-bg1 .image img{
+    background: #ffffff;
+    border-radius: 50%;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    color: aliceblue;
+}
+.land-bg-container .land-bg1 .image h1{
+    font-size: 1.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 5px;
+}
+.land-bg-container .land-bg1 .image p{
+    font-size: 1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.land-bg-container .land-bg2{
+    position: relative;
+    width: 100vw;height: 100vh;
+    background: #000;
+
+} */
