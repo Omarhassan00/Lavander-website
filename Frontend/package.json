@@ -1,5 +1,5 @@
 {
-  "name": "lavander-react",
+  "name": "lavander",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -32,13 +32,14 @@
     "react-dom": "^18.3.1",
     "react-hot-toast": "^2.4.1",
     "react-image-zoom": "^1.3.1",
-    "react-ionicons": "^1.4.6",
+    "react-ionicons": "^4.2.1",
     "react-material-ui-carousel": "^3.4.2",
     "react-medium-image-zoom": "^5.2.10",
     "react-popper": "^2.3.0",
     "react-router-dom": "^6.26.1",
     "recharts": "^2.12.7",
-    "update": "^0.7.4",
+    "tailwind": "^4.0.0",
+    "update": "^0.4.2",
     "upgrade": "^1.1.0",
     "zustand": "^4.5.5"
   },
@@ -55,7 +56,7 @@
     "eslint-plugin-react-refresh": "^0.4.9",
     "globals": "^15.9.0",
     "postcss": "^8.4.44",
-    "tailwindcss": "^3.4.10",
+    "tailwindcss": "^3.4.14",
     "typescript": "^5.5.4",
     "uglify-js": "^3.19.3",
     "vite": "^5.4.1"
