@@ -11,8 +11,6 @@ const PlogsPage = () => {
 	useEffect(() => {
 		fetchAllArticles(Articles);
 	}, [fetchAllArticles , Articles]);
-
-	// console.log("Articles:", Articles);
 	return (
 		<div className='min-h-screen'>
 			<div className='relative z-10 sm:px-6 lg:px-8 py-16'>
@@ -22,7 +20,6 @@ const PlogsPage = () => {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.8 }}
 				>
-					{/* {Articles.charAt(0).toUpperCase() + Articles.slice(1)} */}
 				</motion.h1>
 
 				<motion.div

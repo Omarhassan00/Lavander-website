@@ -2,8 +2,6 @@ import { motion } from "framer-motion";
 import { useProductStore } from "../stores/useProductStore";
 import { useEffect } from "react";
 
-
-
 const History = () => {
     const { orders , fetchuserOrders} = useProductStore();
     useEffect(() => {

@@ -6,15 +6,6 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="row">
-          {/* <div className="footer-col">
-                    <h4>Career</h4>
-                    <ul>
-                        <li><Link to={"#"}>about us</Link></li>
-                        <li><Link to={"#"}>our services</Link></li>
-                        <li><Link to={"#"}>privacy policy</Link></li>
-                        <li><Link to={"#"}>affiliate program</Link></li>
-                    </ul>
-                </div> */}
           <div className="footer-col">
             <h4>company</h4>
             <ul>

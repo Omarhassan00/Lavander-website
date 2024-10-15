@@ -92,7 +92,6 @@ const ContactUs = () => {
           </ul>
         </div>
         <div className="contactForm">
-          {/* action="http://localhost:3000/api/contactus" method="POST"  */}
           <form onSubmit={handleSubmit}>
             <h2>Send Message</h2>
             <div className="inputBox">
@@ -133,9 +132,6 @@ const ContactUs = () => {
               <span>Enter Your Message...</span>
             </div>
             <div className="inputBox">
-              {/* <button type="submit" value="Send">
-                Send
-              </button> */}
               <button
                 type="submit"
                 value="Send"

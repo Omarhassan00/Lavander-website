@@ -10,9 +10,7 @@ const stripePromise = loadStripe(
 );
 
 const OrderSummary = () => {
-	// coupon, isCouponApplied,
 	const { total, subtotal,  cart } = useCartStore();
-
 	const savings = subtotal - total;
 	const formattedSubtotal = subtotal.toFixed(2);
 	const formattedTotal = total.toFixed(2);
@@ -22,7 +20,6 @@ const OrderSummary = () => {
 		const stripe = await stripePromise;
 		const res = await axios.post("/payments/create-checkout-session", {
 			products: cart,
-			// couponCode: coupon ? coupon.code : null,
 		});
 
 		const session = res.data;
@@ -57,13 +54,6 @@ const OrderSummary = () => {
 							<dd className='text-base font-medium text-purple-400'>-${formattedSavings}</dd>
 						</dl>
 					)}
-
-					{/* {coupon && isCouponApplied && (
-						<dl className='flex items-center justify-between gap-4'>
-							<dt className='text-base font-normal text-gray-300'>Coupon ({coupon.code})</dt>
-							<dd className='text-base font-medium text-purple-400'>-{coupon.discountPercentage}%</dd>
-						</dl>
-					)} */}
 					<dl className='flex items-center justify-between gap-4 border-t border-gray-600 pt-2'>
 						<dt className='text-base font-bold text-white'>Total</dt>
 						<dd className='text-base font-bold text-purple-400'>${formattedTotal}</dd>

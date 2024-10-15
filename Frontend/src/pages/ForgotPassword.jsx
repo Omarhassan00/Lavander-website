@@ -12,7 +12,6 @@ const ForgotPassword = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		// console.log(email);
 		forgetpass(email);
 	};
 	return (

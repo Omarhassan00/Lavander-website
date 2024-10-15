@@ -12,7 +12,6 @@ const HomePage = () => {
   useEffect(() => {
     fetchFeaturedArticles();
   }, [fetchFeaturedArticles]);
-  // console.log(Articles)
   return (
     <div
     onClick = { () => {

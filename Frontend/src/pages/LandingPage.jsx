@@ -45,11 +45,7 @@ const LandingPage = () => {
     onClick={ ()=> {
         setTimeout(() => {
             window.location.href = "/" ;
-        }, 10000);
-        //  return () => clearTimeout(timer);
-        
-        // }, [navigate]);
-          
+        }, 8000);          
         const GetStarted = document.querySelector(".Get_Started");
         const ContainerDoor = document.querySelector(".container-door");
         const LandDoor1 = document.querySelector(".land-door1");
@@ -58,7 +54,6 @@ const LandingPage = () => {
         const LandBg2 = document.querySelector(".land-bg2");
         const DoorTxt = document.querySelector(".door-txt");
         const ContBtn = document.querySelector(".cont_btn");
-        // GetStarted.addEventListener("click", () => {
             GetStarted.classList.toggle("active");
             ContainerDoor.classList.toggle("active");
             LandDoor1.classList.toggle("active");
@@ -68,8 +63,6 @@ const LandingPage = () => {
             DoorTxt.classList.toggle("active");
             ContBtn.classList.toggle("active");
         }}
-// })
-
 type="button"
 className='Get_Started'
 >Get Started</button>

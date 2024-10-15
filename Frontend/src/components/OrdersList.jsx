@@ -13,9 +13,6 @@ const OrdersList = () => {
     setSelectedUser(auser);
     setShowOrderForm(true);
   };
-
-  // console.log("orders", orders);
-
   return (
     <motion.div
       className="bg-gray-800 shadow-lg rounded-lg overflow-hidden max-w-4xl mx-auto"
@@ -87,14 +84,6 @@ const OrdersList = () => {
               <td className="px-6 py-4 whitespace-nowrap">
                 <div className="text-sm text-gray-300">{order.totalAmount}</div>
               </td>
-              {/* <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                <button
-                  onClick={() => deleteUser(auser._id)}
-                  className="text-red-400 hover:text-red-300"
-                >
-                  <UserX2Icon className="h-5 w-5" />
-                </button>
-              </td> */}
               <td className="px-6 py-4 whitespace-nowrap">
                 <button
                   onClick={() => toggleFeaturedOrder(order._id)}

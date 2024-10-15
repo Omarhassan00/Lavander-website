@@ -109,7 +109,6 @@ const Navbar = () => {
 								<span className='hidden sm:inline'>Dashboard</span>
 							</Link>
 						)}
-
 						{user ? (
 							<><div
 							onClick={() => {
@@ -119,7 +118,6 @@ const Navbar = () => {
 									USBTN .classList.toggle("active");
 									AllBtnUser.classList.toggle("active");
 									window.onload()
-		
 							}} 
 								className='Us_Btn bg-purple-700 hover:bg-purple-500 text-white py-2 px-4 cursor-pointer flex-nowrap
 						rounded-md flex items-center transition duration-300 ease-in-out'

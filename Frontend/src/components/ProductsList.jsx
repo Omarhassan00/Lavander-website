@@ -13,9 +13,6 @@ const ProductsList = () => {
     setSelectedProduct(product);
     setShowUpdateForm(true);
   };
-
-  // console.log("products", products);
-
   return (
     <motion.div
       className="bg-gray-800 shadow-lg rounded-lg overflow-hidden max-w-4xl mx-auto"
@@ -109,7 +106,6 @@ const ProductsList = () => {
                       deleteProduct(product._id);
                     }
                   }}
-                  // deleteProduct(product._id)}
                   className="text-red-400 hover:text-red-300"
                 >
                   <Trash className="h-5 w-5" />

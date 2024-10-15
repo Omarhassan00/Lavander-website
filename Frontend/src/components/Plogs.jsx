@@ -90,10 +90,6 @@ const Plogs = ({ article }) => {
           <Button onClick={toggleDrawer(true)}>
             <div
             className="btn_plog_card"
-              // style={{
-              //   height: "40vh",
-              //   width: "41vw",
-              // }}
             >
               <img
                 className=" object-cover "

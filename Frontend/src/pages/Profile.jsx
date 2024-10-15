@@ -65,9 +65,6 @@ const Profile = () => {
           >
             Frist Name
           </label>
-          {/* <h3 className="mt-1 block w-full bg-gray-700 border border-gray-600 rounded-md shadow-sm py-2
-						 px-3 text-white focus:outline-none focus:ring-2
-						focus:ring-purple-500 focus:border-purple-500 ">{user.Frist_Name}</h3> */}
           <input
             type="text"
             id="Frist_Name"
@@ -79,7 +76,6 @@ const Profile = () => {
             className="mt-1 block w-full bg-gray-700 border border-gray-600 rounded-md shadow-sm py-2
 						 px-3 text-white focus:outline-none focus:ring-2
 						focus:ring-purple-500 focus:border-purple-500 "
-            // style={{display:"none"}}
             required
           />
         </div>

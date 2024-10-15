@@ -5,7 +5,6 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 
 const style = {
-  //   position: 'absolute' as 'absolute',
   position: "absolute",
   top: "7%",
   left: "7%",

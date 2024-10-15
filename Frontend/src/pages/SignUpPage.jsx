@@ -161,18 +161,7 @@ const SignUpPage = () => {
 								<User className='h-5 w-5 text-gray-400' aria-hidden='true' />
 
 								</div>
-								{/* <input
-									id='name'
-									type='text'
-									required
-									value={formData.name}
-									onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-									className='block w-full px-3 py-2 pl-10 bg-gray-700 border border-gray-600 rounded-md shadow-sm
-									 placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm'
-									placeholder='22st abrahem suez'
-								/> */}
-								<select 
-									// name="" 
+								<select
 									id="gender"
 									required
 									value={formData.gender}

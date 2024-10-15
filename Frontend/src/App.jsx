@@ -22,16 +22,14 @@ import PurchaseCancelPage from "./pages/PurchaseCancelPage";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import ScrollToTopButton from "./components/ScrollToTopButton"
-// import VerifyEmailPopper from "./components/VerifyEmailPopper"
+
 import Profile from "./pages/Profile";
 import History from "./pages/History";
 import LavantgenderPage from "./pages/LavantgenderPage";
 import Lavandgenderpage from "./pages/Lavandgenderpage";
 import ForgotPassword from "./pages/ForgotPassword";
 import LandingPage from "./pages/LandingPage";
-// import BtnEditPass from "./components/BtnEditPass";
-// import btnAddToCart from "./components/btnAddToCart";
-// import BasicModalCard from "./components/BasicModalCard";
+
 function App() {
   const location = useLocation ();
     const { user, checkAuth ,checkingAuth } = useUserStore();
@@ -51,9 +49,6 @@ function App() {
       
       getCartItems();
     }, [getCartItems, user, pathname]);
-  
-
-
     if (checkingAuth) return <LoadingSpinner />;
   return (
     <div className="min-h-screen bg-white text-white relative overflow-hidden">
@@ -65,7 +60,6 @@ function App() {
       </div>
       <div className="relative z-50 ">
       {location.pathname !== '/LandingPage' && <Navbar />}
-        {/* <Navbar /> */}
         
       <ScrollToTopButton/>
         <Routes>
@@ -73,21 +67,16 @@ function App() {
           <Route path='/signup' element={!user ? <SignUpPage /> : <Navigate to='/' />} />
 					<Route path='/login' element={!user ? <LoginPage /> : <Navigate to='/' />} />
 					<Route path='/ForgotPassword' element={!user ? <ForgotPassword /> : <Navigate to='/' />} />
-					{/* <Route path='/VerifyEmailPopper' element={!user ? <VerifyEmailPopper /> : <Navigate to='/' />} /> */}
-					{/* <Route path='/BtnEditPass' element={!user ? <BtnEditPass /> : <Navigate to='/' />} />
-					<Route  element={!user ? <btnAddToCart /> : <Navigate to='/' />} /> */}
 					<Route
 						path='/secret-dashboard'
 						element={user?.role === "admin" ? <AdminPage /> : <Navigate to='/login' />}
 					/>
-          {/* < Navbar location.pathname !== "/LandingPage" /> */}
           <Route path="/LandingPage" element={<LandingPage />} />
           <Route path="/About" element={<About />} />
           <Route path="/ContactUs" element={<ContactUs />} />
           <Route path="/Plogs" element={<PlogsPage />} />
           <Route path="/Profile" element={user ? <Profile /> : <Navigate to='/' />} />
           <Route path="/History" element={user ? <History /> : <Navigate to='/' />} />
-          {/* <Route path="/BasicModalCard" element={<BasicModalCard />} /> */}
 					<Route path='/Product_page' element={<Product_page />} />	
           <Route path='/category/:category' element={<CategoryPage />} />
 					<Route path='/Lavant/:gender' element={<LavantgenderPage />} />
@@ -101,7 +90,6 @@ function App() {
         </Routes>
       </div>
       <Toaster />
-      {/* <Footer /> */}
       {location.pathname !== '/LandingPage' && <Footer />}
 
     </div>

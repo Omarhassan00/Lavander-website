@@ -41,15 +41,9 @@ const SplitCard = ({ product }) => {
         toast.error("Please login to add products to cart", { id: "login" });
         return;
       } else {
-        // add to cart
         addToCart(product);
       }
     };
-    // const props = {
-    //   zoomWidth: 500,
-    //   img: product.image,
-    //   className:"Img_Modal"
-    // };
     return (
       <div className="flex w-full relative flex-col overflow-hidden rounded-lg border border-gray-700 shadow-lg">
         <div
@@ -84,8 +78,7 @@ const SplitCard = ({ product }) => {
       height: "300px",
       position: "fixed",
       top: "85px",}}>
-          <img  
-          // style={{width:"100%",height:"100%"}}
+          <img
           src={mainImage} alt="Main Product" className="Img_Modal main-image" />
         
           <div className="side-images"

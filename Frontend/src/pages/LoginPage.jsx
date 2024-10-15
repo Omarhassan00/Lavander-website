@@ -4,18 +4,15 @@ import { Link } from "react-router-dom";
 import { LogIn, Mail, Lock, ArrowRight, Loader } from "lucide-react";
 import { useUserStore } from "../stores/useUserStore";
 import ShowPassword from "../stores/ShowPassword";
-// import {PassToggle} from "../stores/passtoggle.js"
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { login, loading } = useUserStore();
-//   const {toggle} = PassToggle();
 
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(email, password);
     login(email, password);
   }
   return (
