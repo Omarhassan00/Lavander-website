@@ -208,11 +208,11 @@
     transparent 50%
   );
   position: relative;
-  animation: AnimeCard 6s linear infinite;
+  animation: Animecollo 6s linear infinite;
   transform: rotate(45deg);
 }
 .container_All .container-door .door-txt.active {
-  animation: AnimeCard 6s linear infinite;
+  animation: Animecollo 6s linear infinite;
 }
 .container_All .container-door .door-txt::before {
   content: "";
@@ -227,7 +227,7 @@
   );
 }
 .container_All .container-door .door-txt.active::before {
-  animation: AnimeCard 6s linear infinite;
+  animation: Animecollo 6s linear infinite;
   animation-delay: -1.5s;
 }
 .container_All .container-door .door-txt::after {
@@ -253,7 +253,7 @@
   transform: rotate(47deg);
 }
 .container_All .container-door .door-txt.active b {
-  animation: AnimeCard 6s linear infinite;
+  animation: Animecollo 6s linear infinite;
 }
 .container_All .container-door .door-txt b::before {
   content: "";
@@ -268,7 +268,7 @@
   );
 }
 .container_All .container-door .door-txt.active b::before {
-  animation: AnimeCard 6s linear infinite;
+  animation: Animecollo 6s linear infinite;
   animation-delay: -1.5s;
 }
 .container_All .container-door .door-txt b::after {
@@ -333,9 +333,9 @@
     );
   }
 }
-@keyframes AnimeCard {
+@keyframes Animecollo {
   0% {
-    --a: 0;
+    --a: 0deg;
   }
   100% {
     --a: 360deg;

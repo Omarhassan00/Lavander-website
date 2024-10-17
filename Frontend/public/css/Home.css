@@ -778,6 +778,10 @@
     width: 365px;
     height: 350px;
   }
+  .btn_plog_card_fet {
+    height: 75vh;
+    width: 76.5vw;
+}
 }
 @media (max-width: 1024px) {
   .brand-nav .navigation-brand .menuToggle {
@@ -972,6 +976,10 @@
     height: 37vh;
     top: 21px;
   }
+  .btn_plog_card_fet {
+    height: 75vh;
+    width: 82.5vw;
+}
 }
 @media (max-width: 768px) {
   .brand-nav .navigation-brand .menuToggle {
@@ -1086,10 +1094,19 @@
     font-family: "Jost", sans-serif;
     font-size: 20px;
   }
+  .btn_plog_card_fet {
+    height: 75vh;
+    width: 77.5vw;
+}
 }
 @media (max-width: 600px) {
+    .btn_plog_card_fet {
+        height: 75vh;
+        width: 58.5vw;
+    }
   .brand-nav {
     height: 200vh;
+    margin-top: -300px;
   }
   .brand-nav .navigation-brand {
     position: relative;
@@ -1099,4 +1116,5 @@
     position: absolute;
     margin: 0px auto;
   }
+
 }

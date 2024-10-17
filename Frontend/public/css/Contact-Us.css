@@ -175,11 +175,11 @@
 
 @keyframes AnimeCard {
     0% {
-        --a: 0deg;
+        --a:0deg;
     }
 
     100% {
-        --a: 360deg;
+        --a: 360deg ;
     }
 }
 

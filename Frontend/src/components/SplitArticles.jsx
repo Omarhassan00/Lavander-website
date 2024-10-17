@@ -65,8 +65,10 @@ const SpiltArticles = ({ article }) => {
       <List>
         <ListItem key={article} disablePadding>
           <div className="plog-glass-content  mt-6">
-            <h1 style={{ fontSize: "2em" }}>{article.title}</h1>
-            <p style={{ fontSize: "1em", marginTop: "12px" }}>
+            <h1 style={{ fontSize: "2em",borderBottom: "2px double",display: "flex",textAlign: "center",alignItems: "center",justifyContent: "center",}}>
+              {article.title}
+              </h1>
+            <p style={{ fontSize: "1em", marginTop: "12px",display:" flex",alignItems: "center",textAlign: "center",}}>
               {article.description}
             </p>
           </div>
