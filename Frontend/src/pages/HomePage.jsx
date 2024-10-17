@@ -40,7 +40,9 @@ const HomePage = () => {
             <ul>
               <li className="--i:0.1s">
               <Link to="/Lavant/Male">
-                  <img src="../../public/img/icons8-man-100.png" alt="man" />
+                  <img src="../../public/img/icons8-man-100.png" 
+                    alt="man" 
+                  />
                 </Link>
               </li>
               <li className="--i:0.2s">
@@ -121,25 +123,25 @@ const HomePage = () => {
           <div
             className="img img2"
             style={{
-              backgroundImage: `url('../../public/img/the-process-of-manufacturing-leather-in-shoes-sAy2lp-9SnKWdkdVORmi_w-HDJiD1b7SxSgdBrXZsLu7A.jpeg')`,
+              backgroundImage: "url('../../public/img/the-process-of-manufacturing-leather-in-shoes-sAy2lp-9SnKWdkdVORmi_w-HDJiD1b7SxSgdBrXZsLu7A.jpeg')",
             }}
           ></div>
           <div
             className="img img3"
             style={{
-              backgroundImage: `url('../../public/img/bVla81QrRa-PYIQF68oyeg.png')`,
+              backgroundImage: "url('/public/img/bVla81QrRa-PYIQF68oyeg.png')",
             }}
           ></div>
           <div
             className="img img4"
             style={{
-              backgroundImage: `url('../../public/img/0f9w-awdTQCaFSppdUe4wg.png')`,
+              backgroundImage: "url('../../public/img/0f9w-awdTQCaFSppdUe4wg.png')",
             }}
           ></div>
           <div
             className="img img5"
             style={{
-              backgroundImage: `url('../../public/img/frfNzcf5Tt2RH334kuy1Mg.png')`,
+              backgroundImage: "url('../../public/img/frfNzcf5Tt2RH334kuy1Mg.png')",
             }}
           ></div>
           {/* <div

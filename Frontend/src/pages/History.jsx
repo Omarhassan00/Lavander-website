@@ -14,7 +14,7 @@ const History = () => {
   return (
       
       <motion.div
-      className="bg-gray-800 shadow-lg rounded-lg p-8 mb-8 max-w-xl mx-auto"
+      className="flex flex-col items-center justify-center space-y-4 bg-gray-800 mt-32 shadow-lg rounded-lg p-5 mb-36 max-w-xl mx-auto "
       initial={{ opatotalAmount: 0, y: 20 }}
       animate={{ opatotalAmount: 1, y: 0 }}
       transition={{ duration: 0.8 }}
