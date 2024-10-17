@@ -1,5 +1,4 @@
 
-
 .container-contact-big {
     position: relative;
     min-height: 100vh;
@@ -143,7 +142,7 @@
     position: relative;
     width: 40%;
     background: repeating-conic-gradient(from var(--a), #9d3aff 0%, #9d3aff 10%, transparent 10%, transparent 50%);
-    animation: AnimeCard 6s linear infinite;
+    animation: AnimeCard 6s linear infinite !important;
     padding: 60px;
     box-shadow: 0 0 30px #fff06859;
 }
@@ -153,8 +152,8 @@
     position: absolute;
     inset: 0;
     background: repeating-conic-gradient(from var(--a), #9d3aff 0%, #9d3aff 10%, transparent 10%, transparent 50%);
-    animation: AnimeCard 6s linear infinite;
-    animation-delay: -1.5s;
+    animation: AnimeCard 6s linear infinite !important;
+    animation-delay: -1.5s !important;
     box-shadow: 0 0 30px #fff06859;
 }
 
@@ -163,7 +162,7 @@
     position: absolute;
     inset: 2px;
     border: 20px solid #f5ecff;
-    background: linear-gradient(to right, #68607087, #64398687, #68607087), url(/public/img/ContactUsNew-New.png) no-repeat;
+    background: linear-gradient(to right, #68607087, #64398687, #68607087), url(../img/ContactUsNew-New.png) no-repeat;
     background-size: 475% 235%;
     background-position: center center;
 }
