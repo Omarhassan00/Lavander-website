@@ -82,7 +82,7 @@ const Navbar = () => {
 						{user && (
 							<Link
 								to={"/cart"}
-								className='relative group text-black hover:text-purple-400 transition duration-300 
+								className='cart-text relative group text-black hover:text-purple-400 transition duration-300 
 							ease-in-out'
 							onClick={() => {window.onload()}}
 							>
