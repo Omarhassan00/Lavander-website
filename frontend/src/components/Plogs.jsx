@@ -102,7 +102,6 @@ const Plogs = ({ article }) => {
           <div className="plog-glass  ">
             <div className="plog-glass-content">
               <h1>{article.title}</h1>
-              <p>{article.description}</p>
             </div>
 
             <div className="plog-glass-FT">

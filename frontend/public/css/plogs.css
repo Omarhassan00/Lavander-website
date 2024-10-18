@@ -41,15 +41,14 @@
   position: absolute;
   inset: 9px;
   background: linear-gradient(#ffffff59, #ffffffd0);
-  border-radius: 55px;
-  border-top-right-radius: 100%;
+  border-radius: 55px 100% 55px 55px;
   border-left: 1px solid #fff;
   width: 94%;
-  margin-top: 88px;
+  margin-top: 140px;
   margin-left: 7px;
-  height: 63%;
+  height: 45%;
   border-bottom: 1px solid #fff;
-  transition: 0.5s ease-in-out;
+  transition: .5s ease-in-out;
 }
 .plog-container-big .plog-container .plog-card .logo-plog {
   position: absolute;
@@ -259,6 +258,12 @@
   height: 75vh;
   width: 87.5vw;
 }
+@media (max-width: 1440px) {
+  .btn_plog_card {
+    height: 45vh;
+    width: 43vw;
+}
+}
 @media (max-width: 1024px) {
   .plog-container-big .plog-container .plog-card {
     position: relative;
@@ -304,7 +309,9 @@
 @media (max-width: 600px) {
   .plog-container-big .plog-container .plog-card {
     position: relative;
-    left: 0;
+    width: 350px;
+  }
+  .plog-container-big .plog-container {
     width: 350px;
   }
   .btn_plog_card {
