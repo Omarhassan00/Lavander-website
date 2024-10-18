@@ -40,7 +40,7 @@ const HomePage = () => {
             <ul>
               <li className="--i:0.1s">
               <Link to="/Lavant/Male">
-                  <img src="../../public/img/icons8-man-100.png" 
+                  <img src="https://res.cloudinary.com/ds7lqwxbp/image/upload/v1729211626/static/xoflaktvqpecadmmwife.png" 
                     alt="man" 
                   />
                 </Link>
@@ -48,7 +48,7 @@ const HomePage = () => {
               <li className="--i:0.2s">
               <Link to="/Lavant/Female">
                   <img
-                    src="../../public/img/icons8-businesswoman-100 (1).png"
+                    src="https://res.cloudinary.com/ds7lqwxbp/image/upload/v1729211626/static/gg6dbt6tylw6js8vezhu.png"
                     alt="Woman"
                   />
                 </Link>
@@ -117,31 +117,31 @@ const HomePage = () => {
           <div
             className="img img1"
             style={{
-              backgroundImage: `url('../../public/img/v4QYHc8WS3Ku7YTfX3kBXQ.png')`,
+              backgroundImage: `url('https://res.cloudinary.com/ds7lqwxbp/image/upload/v1729222541/static/smk86a9m7ubyu66k7uzt.png')`,
             }}
           ></div>
           <div
             className="img img2"
             style={{
-              backgroundImage: "url('../../public/img/the-process-of-manufacturing-leather-in-shoes-sAy2lp-9SnKWdkdVORmi_w-HDJiD1b7SxSgdBrXZsLu7A.jpeg')",
+              backgroundImage: "url('https://res.cloudinary.com/ds7lqwxbp/image/upload/v1729222538/static/koxeclafqaomhde4odmr.jpg')",
             }}
           ></div>
           <div
             className="img img3"
             style={{
-              backgroundImage: "url('/public/img/bVla81QrRa-PYIQF68oyeg.png')",
+              backgroundImage: "url('https://res.cloudinary.com/ds7lqwxbp/image/upload/v1729222540/static/eq86zt5rklwlyaqxlkjw.png')",
             }}
           ></div>
           <div
             className="img img4"
             style={{
-              backgroundImage: "url('../../public/img/0f9w-awdTQCaFSppdUe4wg.png')",
+              backgroundImage: "url('https://res.cloudinary.com/ds7lqwxbp/image/upload/v1729222539/static/wojwaa4fomizftgaazoq.png')",
             }}
           ></div>
           <div
             className="img img5"
             style={{
-              backgroundImage: "url('../../public/img/frfNzcf5Tt2RH334kuy1Mg.png')",
+              backgroundImage: "url('https://res.cloudinary.com/ds7lqwxbp/image/upload/v1729222539/static/qxxayhgluwstqp3z5ore.png')",
             }}
           ></div>
           {/* <div

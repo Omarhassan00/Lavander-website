@@ -89,7 +89,7 @@ const ProductCard =  ({product}) => {
           height: "75vh",
           position: "relative",
           right: "-455px",
-          top: "-330px",
+          top: "-300px",
           display: "flex",
           overflowY: "auto",
           flexDirection: "column",

@@ -12,14 +12,6 @@ const LandingPage = () => {
     <div className="land-bg1"></div>
     <div className="land-bg2"></div>
   </div>
-  <div className="door-txt">
-    <b>
-      <h2>
-        Coming <br />
-        Soon
-      </h2>
-    </b>
-  </div>
   <div className="cont_btn">
     <motion.div 
     className='flex flex-col justify-center align-middle text-span sm:mx-auto sm:w-full sm:max-w-md'
@@ -52,16 +44,14 @@ const LandingPage = () => {
         const LandDoor2 = document.querySelector(".land-door2");
         const LandBg1 = document.querySelector(".land-bg1");
         const LandBg2 = document.querySelector(".land-bg2");
-        const DoorTxt = document.querySelector(".door-txt");
         const ContBtn = document.querySelector(".cont_btn");
-            GetStarted.classList.toggle("active");
-            ContainerDoor.classList.toggle("active");
-            LandDoor1.classList.toggle("active");
-            LandDoor2.classList.toggle("active");
-            LandBg1.classList.toggle("active");
-            LandBg2.classList.toggle("active");
-            DoorTxt.classList.toggle("active");
-            ContBtn.classList.toggle("active");
+            GetStarted.classList.toggle("activ");
+            ContainerDoor.classList.toggle("activ");
+            LandDoor1.classList.toggle("activ");
+            LandDoor2.classList.toggle("activ");
+            LandBg1.classList.toggle("activ");
+            LandBg2.classList.toggle("activ");
+            ContBtn.classList.toggle("activ");
         }}
 type="button"
 className='Get_Started'
