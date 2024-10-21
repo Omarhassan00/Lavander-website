@@ -19,7 +19,7 @@ const style = {
   transform: 'translate("-50%", "-50%")',
   width: "85%",
   height: "85%",
-  borderRadius: "50px",
+  borderRadius: "10px",
   backgroundColor: "white",
   border: " 2px solid #c288ff",
   boxShadow:
@@ -29,6 +29,7 @@ const style = {
   justifyContent: "center",
   flexDirection: "column",
   alignItems: "center",
+  overflow:"auto",
 };
 
 const ProductCard =  ({product}) => {
@@ -74,31 +75,11 @@ const ProductCard =  ({product}) => {
         >
           <Box sx={style}>
       <div 
-      className="modal-modal-title0"
-      style={{
-    width: "300px",
-    height: "300px",
-    position: "fixed",
-    top: "85px",}}>
+      className="modal-modal-title0">
         <img 
         src={mainImage} alt="Main Product" className="Img_Modal main-image" />
       
-        <div className="side-images"
-        style={{
-          width: "300px",
-          height: "75vh",
-          position: "relative",
-          right: "-455px",
-          top: "-300px",
-          display: "flex",
-          overflowY: "auto",
-          flexDirection: "column",
-          flexWrap: "nowrap",
-          justifyContent: "space-evenly",
-          alignItems: "center",
-          padding:"0 20px",
-      }}
-        >
+        <div className="side-images">
         {product.image.map((oneimage, index) => (
             <img
             style={{

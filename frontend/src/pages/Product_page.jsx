@@ -13,7 +13,7 @@ const Product_page = () => {
 
   return (
     <div className="relative min-h-screen text-gray-800 overflow-hidden">
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="relative z-10 max-w-7xl mx-auto mt-7 px-4 sm:px-6 lg:px-8 py-16">
         {!loading && products.length > 0 && (
           <FeaturedProducts featuredProducts={products} />
         )}

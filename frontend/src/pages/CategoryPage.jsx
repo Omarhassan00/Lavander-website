@@ -16,7 +16,7 @@ const CategoryPage = () => {
 	}, [fetchProductsByCategory, category]);
 	return (
 		<div className='min-h-screen'>
-			<div className='relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+			<div className='relative z-10 max-w-screen-xl mt-8 mx-auto px-4 sm:px-6 lg:px-8 py-16'>
 				<div className='product_card'></div>
 				<motion.h1
 					className='text-center text-4xl sm:text-5xl font-bold text-purple-800 mb-8'

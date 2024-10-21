@@ -17,9 +17,9 @@
 }
 .plog-container-big .plog-container {
   width: 636px;
-  margin-top: 42px;
+  margin-top: 60px;
   height: 300px;
-  margin-bottom: 44px;
+  margin-bottom: 70px;
   perspective: 1000px;
 }
 .plog-container-big .plog-container .plog-card {
@@ -29,6 +29,7 @@
   transition: 0.5s ease-in-out;
   transform-style: preserve-3d;
   box-shadow: #05472200 40px 50px 25px, #02140033 0 25px 25px;
+  margin-bottom: 20px;
 }
 .plog-container-big .plog-container .plog-card img {
   border-radius: 50px;
@@ -313,6 +314,7 @@
   }
   .plog-container-big .plog-container {
     width: 350px;
+    margin: 30px 0px;
   }
   .btn_plog_card {
     height: 46vh;

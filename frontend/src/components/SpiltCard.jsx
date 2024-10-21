@@ -17,7 +17,7 @@ const style = {
   transform: 'translate("-50%", "-50%")',
   width: "85%",
   height: "85%",
-  borderRadius: "50px",
+  borderRadius: "10px",
   backgroundColor: "white",
   border: " 2px solid #c288ff",
   boxShadow:
@@ -27,6 +27,7 @@ const style = {
   justifyContent: "center",
   flexDirection: "column",
   alignItems: "center",
+  overflow:"auto",
 };
 
 const SplitCard = ({ product }) => {
@@ -76,8 +77,8 @@ const SplitCard = ({ product }) => {
         style={{
       width: "300px",
       height: "300px",
-      position: "fixed",
-      top: "85px",}}>
+      position: "relative",
+      top: "355px",}}>
           <img
           src={mainImage} alt="Main Product" className="Img_Modal main-image" />
         
@@ -86,8 +87,6 @@ const SplitCard = ({ product }) => {
             width: "300px",
             height: "75vh",
             position: "relative",
-            right: "-455px",
-            top: "-330px",
             display: "flex",
             overflowY: "auto",
             flexDirection: "column",
