@@ -5,7 +5,7 @@ const ShowPass = () => {
     <div className="light">
       <span onClick={() => {
         const Toggle = (bt) => {
-            const password = document.getElementById("confirmPassword");
+            const password = document.getElementById("setPasswordAgain");
 
             if (bt.innerText == "visibility_off") {
               password.setAttribute("type", "text");
