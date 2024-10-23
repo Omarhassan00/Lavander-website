@@ -15,7 +15,7 @@ const Navbar = () => {
 		className='fixed top-0 left-0 w-full  bg-white bg-opacity-90 backdrop-blur-md shadow-lg transition-all z-50 duration-300 border-b border-purple-800'>
 			<div className='container mx-auto px-4 py-9'>
 				<div className='flex flex-wrap justify-between items-center'>
-					<Link to='/' className='text-xl font-bold text-purple-400 items-center space-x-2 flex'
+					<Link to='/home' className='text-xl font-bold text-purple-400 items-center space-x-2 flex'
 					style={{position:"absolute",height:"70px"}}
 					>
 					<img className="text-xl items-center space-x-0 flex w-10 h-7" src="https://www.res.cloudinary.com/ds7lqwxbp/image/upload/v1728879865/articles/kdt4i7zk0dgudiwxkvwf.png" alt="Logo Not Found" />
@@ -40,7 +40,7 @@ const Navbar = () => {
 					   >
 						<nav className=" flex flex-nowrap justify-between flex-row gap-6 text-center h-12 max-w-xl items-center">
 						<Link
-							to='/'
+							to='/home'
 							className='text-black hover:text-purple-400 transition duration-300
 					 ease-in-out'
 					 onClick={() => {window.onload()}}
@@ -150,7 +150,7 @@ const Navbar = () => {
 								</button>
 								</Link>
 								<Link
-								to='/'
+								to='/home'
 								onClick={logout}
 								>
 								<button

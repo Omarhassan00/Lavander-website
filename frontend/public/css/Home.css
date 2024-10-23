@@ -503,12 +503,12 @@
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
   opacity: 1;
-  transition: 0.8s ease-in-out;
+  transition:all 2s ease-in-out;
   cursor: pointer;
 }
 .brand-nav .navigation-brand:hover .navigation-text {
   bottom: -110px;
-  transition: 0.8s ease-in-out;
+  transition:all 2s ease-in-out;
   background: radial-gradient(
     circle at 50%,
     #b296d4,
@@ -563,11 +563,11 @@
   padding: 0 20px;
   transform: rotateY(45deg);
   text-shadow: 0 0 10px #ffe49f9e;
-  transition: 0.8s ease-in-out;
+  transition:all 2s ease-in-out;
 }
 .brand-nav .navigation-brand:hover p {
   display: inline-flex;
-  transition: 0.8s ease-in-out;
+  transition:all 2s ease-in-out;
 }
 .brand-nav .navigation-text1 {
   position: absolute;
@@ -581,12 +581,12 @@
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
   opacity: 1;
-  transition: 0.8s ease-in-out;
+  transition:all 2s ease-in-out;
   cursor: pointer;
 }
 .brand-nav .navigation-brand1:hover .navigation-text1 {
   bottom: -110px;
-  transition: 0.8s ease-in-out;
+  transition:all 2s ease-in-out;
   background: radial-gradient(
     circle at 50%,
     #b296d4,

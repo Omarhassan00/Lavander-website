@@ -36,7 +36,7 @@ const LandingPage = () => {
     <button 
     onClick={ ()=> {
         setTimeout(() => {
-            window.location.href = "/" ;
+            window.location.href = "/home" ;
         }, 8000);          
         const GetStarted = document.querySelector(".Get_Started");
         const ContainerDoor = document.querySelector(".container-door");

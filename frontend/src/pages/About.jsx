@@ -9,7 +9,9 @@ const About = () => {
           <span></span>
         </div>
       </div>
-      <div className="about-members">
+      <div 
+      style={{display:"none"}}
+      className="about-members">
         <div
         onClick={() => { const TogInt = document.querySelector(".tog-intr");
             TogInt.classList.toggle("active");

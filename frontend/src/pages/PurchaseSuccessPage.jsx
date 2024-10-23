@@ -83,7 +83,7 @@ const PurchaseSuccessPage = () => {
 							Thanks for trusting us!
 						</button>
 						<Link
-							to={"/"}
+							to={"/home"}
 							className='w-full bg-gray-700 hover:bg-gray-600 text-purple-400 font-bold py-2 px-4 
             rounded-lg transition duration-300 flex items-center justify-center'
 						>

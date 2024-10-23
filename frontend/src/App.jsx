@@ -59,19 +59,19 @@ function App() {
         </div>
       </div>
       <div className="relative z-50 ">
-      {location.pathname !== '/LandingPage' && <Navbar />}
+      {location.pathname !== '/' && <Navbar />}
         
       <ScrollToTopButton/>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path='/signup' element={!user ? <SignUpPage /> : <Navigate to='/' />} />
-					<Route path='/login' element={!user ? <LoginPage /> : <Navigate to='/' />} />
-					<Route path='/ForgotPassword' element={!user ? <ForgotPassword /> : <Navigate to='/' />} />
+          <Route path='/home' element={<HomePage />} />
+          <Route path='/signup' element={!user ? <SignUpPage /> : <Navigate to='/home' />} />
+					<Route path='/login' element={!user ? <LoginPage /> : <Navigate to='/home' />} />
+					<Route path='/ForgotPassword' element={!user ? <ForgotPassword /> : <Navigate to='/home' />} />
 					<Route
 						path='/secret-dashboard'
 						element={user?.role === "admin" ? <AdminPage /> : <Navigate to='/login' />}
 					/>
-          <Route path="/LandingPage" element={<LandingPage />} />
+          <Route path="/" element={<LandingPage />} />
           <Route path="/About" element={<About />} />
           <Route path="/ContactUs" element={<ContactUs />} />
           <Route path="/Plogs" element={<PlogsPage />} />
@@ -90,7 +90,7 @@ function App() {
         </Routes>
       </div>
       <Toaster />
-      {location.pathname !== '/LandingPage' && <Footer />}
+      {location.pathname !== '/' && <Footer />}
 
     </div>
   );

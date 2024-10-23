@@ -4,6 +4,10 @@ import Modal from "@mui/material/Modal";
 import Button from "@mui/material/Button";
 import { Lock ,Loader, UserCog2} from "lucide-react";
 import { useUserStore } from "../stores/useUserStore";
+import ShowPass from "../stores/ShowPass";
+import ShowPassword from "../stores/ShowPassword";
+import PasswordChecklist from "react-password-checklist";
+
 
 const style = {
   position: "absolute",
@@ -31,9 +35,11 @@ export default function BtnEditPass(email) {
     
     const [formData, setFormData] = useState({
       old_password: "",
-      new_password: "",
-      confirmnewPassword: "",
+      setPassword: "",
+      setPasswordAgain: "",
     });
+    const [password, setPassword] = useState("");
+    const [passwordAgain, setPasswordAgain] = useState("");
     
     const { updatePass, loading } = useUserStore();
     
@@ -92,7 +98,7 @@ export default function BtnEditPass(email) {
               />
             </div>
           </div>
-          <div id="parent-modal-title1">
+          {/* <div id="parent-modal-title1">
             <div>
               <label
                 htmlFor="new_password"
@@ -151,8 +157,94 @@ export default function BtnEditPass(email) {
 						 focus:border-purple-500"
                 required
               />
+            </div> */}
+          {/* </div> */}
+
+          <div>
+              <div className="mt-1 relative rounded-md shadow-sm">
+                <div className="relative block text-sm font-medium text-gray-300">
+                  <label htmlFor="setPassword">New password:</label>
+                  <div className="flex absolute inset-y-0 top-6 left-0 pl-3 items-center pointer-events-none">
+                    <Lock
+                      className="h-5 w-5 text-gray-400"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <input
+                    className=" block w-full px-3 py-2 pl-10 bg-gray-700 border
+			border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
+                    type="password"
+                    id="setPassword"
+                    placeholder="••••••••"
+                    required
+                    value={formData.setPassword}
+                    // onChange={(e) =>
+                    // setFormData(...formData ),
+                    // setPassword(e.target.value),
+                    // }
+                    onChange={(e) => {
+                      setFormData({ ...formData, setPassword: e.target.value }),
+                        setPassword(e.target.value);
+                    }}
+                  />
+                  <ShowPassword />
+                </div>
+              </div>
+              <div className="mt-1 relative rounded-md shadow-sm">
+                <div className="relative block text-sm font-medium text-gray-300">
+                  <label htmlFor="setPasswordAgain" className="mb-3 ">
+                    Confirm new Password:
+                  </label>
+                  <div className="flex absolute inset-y-0 top-6 left-0 pl-3 items-center pointer-events-none">
+                    <Lock
+                      className="h-5 w-5 text-gray-400"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <input
+                    className=" block w-full px-3 py-2 pl-10 bg-gray-700 border
+			border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
+                    type="password"
+                    id="setPasswordAgain"
+                    placeholder="••••••••"
+                    required
+                    value={formData.setPasswordAgain}
+                    // onChange={(e) =>
+                    // 	setFormData(...formData ),
+                    // 	setPasswordAgain(e.target.value),
+                    // }
+                    onChange={(e) => {
+                      setFormData({
+                        ...formData,
+                        setPasswordAgain: e.target.value,
+                      }),
+                        setPasswordAgain(e.target.value);
+                    }}
+                  />
+                  <ShowPass />
+                </div>
+              </div>
+              <PasswordChecklist
+                rules={[
+                  "minLength",
+                  "specialChar",
+                  "number",
+                  "capital",
+                  "match",
+                ]}
+                minLength={8}
+                value={password}
+                valueAgain={passwordAgain}
+                style={{color:"white", margin:"10px 0px"}}
+                messages={{
+                  minLength: "Password has more than 8 characters.",
+                  specialChar: "Password has special characters.",
+                  number: "Password has a number.",
+                  capital: "Password has a capital letter.",
+                  match: "Password match.",
+                }}
+              />
             </div>
-          </div>
           <button
           onClick={handleSubmit}
 

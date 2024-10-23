@@ -88,7 +88,7 @@ const SignUpPage = () => {
                     }
                     className="flex w-44 px-3 py-2 pl-10 bg-gray-700 border border-gray-600 rounded-md shadow-sm
 									 placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
-                    placeholder="John"
+                    placeholder="Frist Name"
                   />
                 </div>
               </div>
@@ -116,7 +116,7 @@ const SignUpPage = () => {
                     }
                     className="flex w-44 px-3 py-2 pl-10 bg-gray-700 border border-gray-600 rounded-md shadow-sm
 									 placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
-                    placeholder="Doe"
+                    placeholder="Last Name"
                   />
                 </div>
               </div>
@@ -146,7 +146,7 @@ const SignUpPage = () => {
                     }
                     className="block w-44 px-3 py-2 pl-10 bg-gray-700 border border-gray-600 rounded-md shadow-sm
 									 placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
-                    placeholder="Egypt"
+                    placeholder="Country"
                   />
                 </div>
               </div>
@@ -174,7 +174,7 @@ const SignUpPage = () => {
                     }
                     className="block w-44 px-3 py-2 pl-10 bg-gray-700 border border-gray-600 rounded-md shadow-sm
 									 placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
-                    placeholder="Suez"
+                    placeholder="City"
                   />
                 </div>
               </div>
@@ -203,7 +203,7 @@ const SignUpPage = () => {
                   }
                   className="block w-full px-3 py-2 pl-10 bg-gray-700 border border-gray-600 rounded-md shadow-sm
 									 placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
-                  placeholder="22st abrahem suez"
+                  placeholder="Address"
                 />
               </div>
             </div>
@@ -257,7 +257,6 @@ const SignUpPage = () => {
                   }
                   className="block w-full px-3 py-2 pl-10 bg-gray-700 border border-gray-600 rounded-md shadow-sm
 									 placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
-                  placeholder="22st abrahem suez"
                 />
               </div>
             </div>
@@ -288,7 +287,7 @@ const SignUpPage = () => {
                   }
                   className="block w-full px-3 py-2 pl-10 bg-gray-700 border border-gray-600 rounded-md shadow-sm
 									 placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
-                  placeholder="Enter Your Number"
+                  placeholder="Enter Your Phone Number"
                 />
               </div>
             </div>
@@ -322,115 +321,89 @@ const SignUpPage = () => {
             </div>
 
             <div>
-              {/* <label
-                htmlFor="password"
-                className="block text-sm font-medium text-gray-300"
-              >
-                Password
-              </label> */}
               <div className="mt-1 relative rounded-md shadow-sm">
-				<div className="relative block text-sm font-medium text-gray-300">
-                  <label
-				  htmlFor="setPassword"
-				  >Password:</label>
-                <div className="flex absolute inset-y-0 top-6 left-0 pl-3 items-center pointer-events-none">
-                  <Lock className="h-5 w-5 text-gray-400" aria-hidden="true" />
-				  </div>
-                  <input
-                    className=" block w-full px-3 py-2 pl-10 bg-gray-700 border
-			border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
-                    type="password"
-					id="setPassword"
-					placeholder="••••••••"
-					required
-                  value={formData.setPassword}
-                    // onChange={(e) =>
-					// setFormData(...formData ), 
-					// setPassword(e.target.value),
-					// }
-					onChange={(e) => {setFormData({ ...formData, setPassword: e.target.value }), setPassword(e.target.value)}}
-                  />
-				  <ShowPassword />
-				  </div>
-				  </div>
-              <div className="mt-1 relative rounded-md shadow-sm">
-				  <div className="relative block text-sm font-medium text-gray-300">
-                  <label
-				  htmlFor="setPasswordAgain"
-				  className="mb-3 ">Confirm Password:</label>
+                <div className="relative block text-sm font-medium text-gray-300">
+                  <label htmlFor="setPassword">Password:</label>
                   <div className="flex absolute inset-y-0 top-6 left-0 pl-3 items-center pointer-events-none">
-                  <Lock className="h-5 w-5 text-gray-400" aria-hidden="true" />
-				  </div>
+                    <Lock
+                      className="h-5 w-5 text-gray-400"
+                      aria-hidden="true"
+                    />
+                  </div>
                   <input
                     className=" block w-full px-3 py-2 pl-10 bg-gray-700 border
 			border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
                     type="password"
-					id="setPasswordAgain"
-					placeholder="••••••••"
-					required
-                  value={formData.setPasswordAgain}
-					// onChange={(e) => 
-					// 	setFormData(...formData ),
-					// 	setPasswordAgain(e.target.value),
-					// }
-					onChange={(e) => {setFormData({ ...formData, setPasswordAgain: e.target.value }), setPasswordAgain(e.target.value)}}
+                    id="setPassword"
+                    placeholder="••••••••"
+                    required
+                    value={formData.setPassword}
+                    // onChange={(e) =>
+                    // setFormData(...formData ),
+                    // setPassword(e.target.value),
+                    // }
+                    onChange={(e) => {
+                      setFormData({ ...formData, setPassword: e.target.value }),
+                        setPassword(e.target.value);
+                    }}
                   />
-				  <ShowPass />
-                  </div>
-                  </div>
-                <PasswordChecklist
-                  rules={[
-                    "minLength",
-                    "specialChar",
-                    "number",
-                    "capital",
-                    "match",
-                  ]}
-                  minLength={8}
-                  value={password}
-                  valueAgain={passwordAgain}
-                  messages={{
-                    minLength: "Password has more than 8 characters.",
-                    specialChar: "Password has special characters.",
-                    number: "Password has a number.",
-                    capital: "Password has a capital letter.",
-                    match: "Password match.",
-                  }}
-                />
-                
-              </div>
-
-            {/* <div>
-              <label
-                htmlFor="confirmPassword"
-                className="block text-sm font-medium text-gray-300"
-              >
-                Confirm Password
-              </label>
-              <div className="mt-1 relative rounded-md shadow-sm">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <Lock className="h-5 w-5 text-gray-400" aria-hidden="true" />
+                  <ShowPassword />
                 </div>
-                <input
-                  id="confirmPassword"
-                  type="password"
-                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                  required
-                  value={formData.confirmPassword}
-                  onChange={(e) =>
-                    setFormData({
-                      ...formData,
-                      confirmPassword: e.target.value,
-                    })
-                  }
-                  className=" block w-full px-3 py-2 pl-10 bg-gray-700 border
-									 border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
-                  placeholder="••••••••"
-                />
-                <ShowPass />
               </div>
-            </div> */}
-
+              <div className="mt-1 relative rounded-md shadow-sm">
+                <div className="relative block text-sm font-medium text-gray-300">
+                  <label htmlFor="setPasswordAgain" className="mb-3 ">
+                    Confirm Password:
+                  </label>
+                  <div className="flex absolute inset-y-0 top-6 left-0 pl-3 items-center pointer-events-none">
+                    <Lock
+                      className="h-5 w-5 text-gray-400"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <input
+                    className=" block w-full px-3 py-2 pl-10 bg-gray-700 border
+			border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
+                    type="password"
+                    id="setPasswordAgain"
+                    placeholder="••••••••"
+                    required
+                    value={formData.setPasswordAgain}
+                    // onChange={(e) =>
+                    // 	setFormData(...formData ),
+                    // 	setPasswordAgain(e.target.value),
+                    // }
+                    onChange={(e) => {
+                      setFormData({
+                        ...formData,
+                        setPasswordAgain: e.target.value,
+                      }),
+                        setPasswordAgain(e.target.value);
+                    }}
+                  />
+                  <ShowPass />
+                </div>
+              </div>
+              <PasswordChecklist
+                rules={[
+                  "minLength",
+                  "specialChar",
+                  "number",
+                  "capital",
+                  "match",
+                ]}
+                minLength={8}
+                value={password}
+                valueAgain={passwordAgain}
+                messages={{
+                  minLength: "Password has more than 8 characters.",
+                  specialChar: "Password has special characters.",
+                  number: "Password has a number.",
+                  capital: "Password has a capital letter.",
+                  match: "Password match.",
+                }}
+              />
+            </div>
             <button
               type="submit"
               className="w-full flex justify-center py-2 px-4 border border-transparent 
