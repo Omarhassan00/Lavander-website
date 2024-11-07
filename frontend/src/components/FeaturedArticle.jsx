@@ -33,7 +33,7 @@ const FeaturedArticle = ({ featuredArticle }) => {
 
   return (
     <div className="pb-12">
-      <div className="container h-3/4 mx-auto px-20 pt-20">
+      <div className="cont-fet container h-3/4 mx-auto px-20 pt-20">
         <div className="relative h-5/6">
           <div className="overflow-hidden">
             <div

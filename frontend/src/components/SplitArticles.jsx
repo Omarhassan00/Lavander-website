@@ -68,7 +68,7 @@ const SpiltArticles = ({ article }) => {
             <h1 style={{ fontSize: "2em",borderBottom: "2px double",display: "flex",textAlign: "center",alignItems: "center",justifyContent: "center",}}>
               {article.title}
               </h1>
-            <p style={{ fontSize: "1em", marginTop: "12px",display:" flex",alignItems: "center",textAlign: "center",}}>
+            <p style={{ fontSize: "1em", marginTop: "12px",display:" flex",alignItems: "center",textAlign: "center",padding: "0px 20px",}}>
               {article.description}
             </p>
           </div>

@@ -61,7 +61,7 @@ const SplitCard = ({ product }) => {
           <Button sx={{ height: "100%" }} onClick={handleOpen}>
             <img
               className="object-contain w-full h-full transition-transform duration-300 ease-in-out hover:scale-110"
-              src={product.image[0]}
+              src={product.main_image}
               alt="product image"
             />
           </Button>

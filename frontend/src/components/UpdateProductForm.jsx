@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { PlusCircle, Upload, Loader } from "lucide-react";
+import { PlusCircle,Upload, Loader } from "lucide-react";
 import { useProductStore } from "../stores/useProductStore";
 import toast from "react-hot-toast";
 
 const categories = ["Lavand", "Lavant"];
 const genders = ["Male", "Female"];
-
 
 const UpdateProductForm = (product) => {
   const [Theproduct, setProduct] = useState({
@@ -19,7 +18,8 @@ const UpdateProductForm = (product) => {
     gender: product.product.gender,
     color: product.product.color,
     category: product.product.category,
-    image: product.product.image,
+    image: "",
+    main_image: "",
   });
 
   const { updateProduct, loading } = useProductStore();
@@ -27,32 +27,33 @@ const UpdateProductForm = (product) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await updateProduct(Theproduct)
+      await updateProduct(Theproduct);
       setProduct({
-        id : product.product._id,
+        id: product.product._id,
         name: "",
         code: "",
         description: "",
         details: "",
         price: "",
-        gender: "male",
+        gender: "",
         color: "",
         category: "",
         image: "",
-      })
+        main_image:""
+      });
       window.location.reload();
     } catch {
       toast.error("error updating a product");
     }
   };
 
-  const handleImageChange = (e) => {
+  const handlemainImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
       const reader = new FileReader();
 
       reader.onloadend = () => {
-        setProduct({ ...Theproduct, image: reader.result });
+        setProduct({ ...Theproduct, main_image: reader.result });
       };
 
       reader.readAsDataURL(file); // base64
@@ -60,6 +61,28 @@ const UpdateProductForm = (product) => {
 
   }
 
+  const handleImageChange = (e) => {
+    const files = e.target.files;
+    const imagePromises = [];
+  
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i];
+      const reader = new FileReader();
+  
+      const promise = new Promise((resolve) => {
+        reader.onloadend = () => {
+          resolve(reader.result);
+        };
+        reader.readAsDataURL(file); // base64
+      });
+  
+      imagePromises.push(promise);
+    }
+  
+    Promise.all(imagePromises).then((images) => {
+      setProduct({ ...Theproduct, image: images });
+    });
+  };
   return (
     <motion.div
       className="bg-gray-800 shadow-lg rounded-lg p-8 mb-8 max-w-xl mx-auto"
@@ -160,7 +183,7 @@ const UpdateProductForm = (product) => {
           />
         </div>
 
-		<div>
+        <div>
           <label
             htmlFor="color"
             className="block text-sm font-medium text-gray-300"
@@ -264,9 +287,30 @@ const UpdateProductForm = (product) => {
         <div className="mt-1 flex items-center">
           <input
             type="file"
+            id="main_image"
+            className="sr-only"
+            accept="image/*"
+            onChange={handlemainImageChange}
+          />
+          <label
+            htmlFor="main_image"
+            className="cursor-pointer bg-gray-700 py-2 px-3 border border-gray-600 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-300 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
+          >
+            <Upload className="h-5 w-5 inline-block mr-2" />
+            Upload main image
+          </label>
+          {Theproduct.main_image && (
+            <span className="ml-3 text-sm text-gray-400">Main Image uploaded </span>
+          )}
+        </div>
+
+        <div className="mt-1 flex items-center">
+          <input
+            type="file"
             id="image"
             className="sr-only"
             accept="image/*"
+            multiple
             onChange={handleImageChange}
           />
           <label
@@ -274,14 +318,24 @@ const UpdateProductForm = (product) => {
             className="cursor-pointer bg-gray-700 py-2 px-3 border border-gray-600 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-300 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
           >
             <Upload className="h-5 w-5 inline-block mr-2" />
-            Upload Image
+            Upload Images
           </label>
-          {Theproduct.image && (
-            <span className="ml-3 text-sm text-gray-400">Image uploaded </span>
+          {Theproduct.image.length > 0 && (
+            <div className="flex flex-wrap">
+              {Theproduct.image.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt={`Uploaded image ${index + 1}`}
+                  className="w-20 h-20 mr-2 mb-2"
+                />
+              ))}
+            </div>
           )}
         </div>
 
         <button
+          // onClick={UpdateProductForm}
           type="submit"
           className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md 
 					shadow-sm text-sm font-medium text-white bg-purple-600 hover:bg-purple-700 
@@ -296,7 +350,6 @@ const UpdateProductForm = (product) => {
               />
               Loading...
             </>
-            
           ) : (
             <>
               <PlusCircle className="mr-2 h-5 w-5" />
@@ -306,7 +359,7 @@ const UpdateProductForm = (product) => {
         </button>
       </form>
     </motion.div>
-    
   );
 };
 export default UpdateProductForm;
+

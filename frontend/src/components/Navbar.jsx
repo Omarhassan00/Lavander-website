@@ -18,7 +18,7 @@ const Navbar = () => {
 					<Link to='/home' className='text-xl font-bold text-purple-400 items-center space-x-2 flex'
 					style={{position:"absolute",height:"70px"}}
 					>
-					<img className="text-xl items-center space-x-0 flex w-10 h-7" src="https://www.res.cloudinary.com/ds7lqwxbp/image/upload/v1728879865/articles/kdt4i7zk0dgudiwxkvwf.png" alt="Logo Not Found" />
+					<img className="text-xl items-center space-x-0 flex w-10 h-7" src="https://res.cloudinary.com/ds7lqwxbp/image/upload/c_fit,h_150,w_150/static/bmrpkieogxtuhowcizlx.jpg" alt="Logo Not Found" />
 						Lavander Life
 					</Link>
 

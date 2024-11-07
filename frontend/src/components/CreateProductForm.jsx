@@ -17,7 +17,8 @@ const CreateProductForm = () => {
     gender: "",
     color: "",
     category: "",
-    image: [],
+    main_image:"",
+    image: "",
   });
 
   const { createProduct, loading } = useProductStore();
@@ -35,7 +36,8 @@ const CreateProductForm = () => {
         gender: "",
         color: "",
         category: "",
-        image: [],
+        main_image:"",
+        image: "",
       });
       toast.success("Product created successfully");
     } catch {
@@ -43,22 +45,56 @@ const CreateProductForm = () => {
     }
   };
 
-  const handleImageChange = (e) => {
-    const files = e.target.files;
-    const images = [];
-  
-    for (let i = 0; i < files.length; i++) {
-      const file = files[i];
+  const handlemainImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
       const reader = new FileReader();
-  
+
       reader.onloadend = () => {
-        images.push(reader.result);
-        setNewProduct({ ...newProduct, image: images });
+        setNewProduct({ ...newProduct, main_image: reader.result });
       };
-  
-      reader.readAsDataURL(file); // base64
+      reader.readAsDataURL(file); // base6.4
     }
   };
+    const handleImageChange = (e) => {
+  const files = e.target.files;
+  const imagePromises = [];
+
+  for (let i = 0; i < files.length; i++) {
+    const file = files[i];
+    const reader = new FileReader();
+
+    const promise = new Promise((resolve) => {
+      reader.onloadend = () => {
+        resolve(reader.result);
+      };
+      reader.readAsDataURL(file); // base64
+    });
+
+    imagePromises.push(promise);
+  }
+
+  Promise.all(imagePromises).then((images) => {
+    setNewProduct({ ...newProduct, image: images });
+  });
+};
+
+  // const handleImageChange = (e) => {
+  //   const files = e.target.files;
+  //   const images = [];
+  
+  //   for (let i = 0; i < files.length; i++) {
+  //     const file = files[i];
+  //     const reader = new FileReader();
+  
+  //     reader.onloadend = () => {
+  //       images.push(reader.result);
+  //       setNewProduct({ ...newProduct, image: images });
+  //     };
+  
+  //     reader.readAsDataURL(file); // base64
+  //   }
+  // };
   return (
     <motion.div
       className="bg-gray-800 shadow-lg rounded-lg p-8 mb-8 max-w-xl mx-auto"
@@ -260,6 +296,26 @@ const CreateProductForm = () => {
           </select>
         </div>
 
+        <div className="mt-1 flex items-center">
+          <input
+            type="file"
+            id="main_image"
+            className="sr-only"
+            accept="image/*"
+            onChange={handlemainImageChange}
+          />
+          <label
+            htmlFor="main_image"
+            className="cursor-pointer bg-gray-700 py-2 px-3 border border-gray-600 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-300 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
+          >
+            <Upload className="h-5 w-5 inline-block mr-2" />
+            Upload Image
+          </label>
+          {newProduct.main_image && (
+            <span className="ml-3 text-sm text-gray-400">main image uploaded </span>
+          )}
+        </div>
+
 <div className="mt-1 flex items-center">
   <input
     type="file"
@@ -317,3 +373,4 @@ const CreateProductForm = () => {
   );
 };
 export default CreateProductForm;
+

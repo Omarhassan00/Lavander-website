@@ -33,7 +33,7 @@ const style = {
 };
 
 const ProductCard =  ({product}) => {
-  const [mainImage, setMainImage] = useState(product.image[0]);
+  const [mainImage, setMainImage] = useState(product.main_image);
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -63,7 +63,7 @@ const ProductCard =  ({product}) => {
         <Button sx={{ height: "100%" }} onClick={handleOpen}>
           <img
             className="object-contain w-full h-full transition-transform duration-300 ease-in-out hover:scale-110"
-            src={product.image[0]}
+            src={product.main_image}
             alt="product image"
           />
         </Button>
@@ -136,12 +136,12 @@ const ProductCard =  ({product}) => {
       </div>
 
       <div className="mt-4 px-5 pb-5">
-        <h5 className="text-xl font-semibold tracking-tight text-white">
+        <h5 className="text-xl font-semibold tracking-tight text-black">
           {product.name}
         </h5>
         <div className="mt-2 mb-5 flex items-center justify-between">
           <p>
-            <span className="text-3xl font-bold text-purple-400">
+            <span className="text-3xl font-bold text-purple-800">
               ${product.price}
             </span>
           </p>

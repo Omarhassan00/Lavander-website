@@ -1100,10 +1100,6 @@
 }
 }
 @media (max-width: 600px) {
-    .btn_plog_card_fet {
-        height: 75vh;
-        width: 58.5vw;
-    }
   .brand-nav {
     height: 200vh;
     margin-top: -300px;
@@ -1115,5 +1111,26 @@
   .brand-nav .navigation-brand1 {
     position: absolute;
     margin: 0px auto;
+  }
+  .css-1u169s7-MuiList-root {
+    width: 390px !important;
+    height: 390px !important;
+    display: grid !important;
+    place-items: center !important;
+    place-content: center !important;
+  }
+  .css-igv6l8-MuiListItem-root {
+    width: 95% !important;
+}
+  .css-10xrr17-MuiImageListItem-root {
+    height: auto !important;
+    width: 100% !important;
+  }
+  .cont-fet{
+    padding-left: 1rem !important;
+    padding-right: 4rem !important;
+  }
+.css-10xrr17-MuiImageListItem-root .MuiImageListItem-img {
+    object-fit: fill !important;
   }
 }

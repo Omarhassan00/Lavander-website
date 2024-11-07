@@ -74,13 +74,13 @@ const HomePage = () => {
             <ul>
               <li className="--i:0.1s">
               <Link to="/Lavand/Male">
-                  <img src="../../public/img/icons8-man-100.png" alt="man" />
+                  <img src="https://res.cloudinary.com/ds7lqwxbp/image/upload/v1729211626/static/xoflaktvqpecadmmwife.png" alt="man" />
                 </Link>
               </li>
               <li className="--i:0.2s">
               <Link to="/Lavand/Female">
                   <img
-                    src="../../public/img/icons8-businesswoman-100 (1).png"
+                    src="https://res.cloudinary.com/ds7lqwxbp/image/upload/v1729211626/static/gg6dbt6tylw6js8vezhu.png"
                     alt=""
                   />
                 </Link>
