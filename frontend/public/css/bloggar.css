@@ -1,0 +1,118 @@
+:root {
+  --transition: cudic-bezier(0.1, 0.7, 0, 1);
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.wrapper .imgs-parent {
+  display: flex;
+  gap: 0.4rem;
+  perspective: 60rem;
+}
+.img {
+  width: 8.4em;
+  height: 21rem;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 1.25s ease-in-out var(--transition),
+    filter 3s var(--transition) ease-in-out,
+    width 0.3s var(--transition) ease-in-out;
+  position: relative;
+  filter: grayscale(1) brightness(0.5);
+  will-change: transform, filter;
+}
+.img:hover {
+  transform: translateZ(17.375rem);
+  filter: inherit;
+  transition: 0.2s ease-in-out;
+}
+.img:hover + * {
+  transform: translateZ(14.77rem) rotateY(35deg);
+  z-index: -1;
+  filter: grayscale(0.2) brightness(0.9);
+  transition: 0.3s ease-in-out;
+}
+.img:hover + * + * {
+  transform: translateZ(9.73rem) rotateY(40deg);
+  z-index: -2;
+  filter: grayscale(0.4) brightness(0.8);
+  transition: 0.4s ease-in-out;
+}
+.img:hover + * + * + * {
+  transform: translateZ(4.17rem) rotateY(35deg);
+  z-index: -3;
+  filter: grayscale(0.6) brightness(0.7);
+  transition: 0.5s ease-in-out;
+}
+.img:hover + * + * + * + * {
+  transform: translateZ(1.1rem) rotateY(25deg);
+  z-index: -4;
+  filter: grayscale(0.8) brightness(0.6);
+  transition: 0.5s ease-in-out;
+}
+.img:has(+ :hover) {
+  transform: translateZ(14.77rem) rotateY(-35deg);
+  filter: grayscale(0.2) brightness(0.9);
+  transition: 0.3s ease-in-out;
+}
+.img:has(+ * + :hover) {
+  transform: translateZ(9.73rem) rotateY(-40deg);
+  filter: grayscale(0.4) brightness(0.8);
+  transition: 0.4s ease-in-out;
+}
+.img:has(+ * + * + :hover) {
+  transform: translateZ(4.17rem) rotateY(-35deg);
+  filter: grayscale(0.6) brightness(0.7);
+  transition: 0.5s ease-in-out;
+}
+.img:has(+ * + * + * + :hover) {
+  transform: translateZ(1.1rem) rotateY(-25deg);
+  filter: grayscale(0.8) brightness(0.6);
+  transition: 0.5s ease-in-out;
+}
+.img1 {
+  background-image: url(../img/v4QYHc8WS3Ku7YTfX3kBXQ.png);
+}
+.img2 {
+  background-image: url(../img/the-process-of-manufacturing-leather-in-shoes-sAy2lp-9SnKWdkdVORmi_w-HDJiD1b7SxSgdBrXZsLu7A.jpeg);
+}
+.img3 {
+  background-image: url(../img/bVla81QrRa-PYIQF68oyeg.png);
+}
+.img4 {
+  background-image: url(../img/0f9w-awdTQCaFSppdUe4wg.png);
+}
+.img5 {
+  background-image: url(../img/frfNzcf5Tt2RH334kuy1Mg.png);
+}
+/* .img6 {
+  background-image: url(../img/view-3d-businessman_23-2150709872.jpg);
+}
+.img7 {
+  background-image: url(../img/view-3d-girl-with-open-book.jpg);
+}
+.img8 {
+  background-image: url(../img/view-3d-shocked-man-with-mouth-wide-open.jpg);
+} */
+.img::before,
+.img::after {
+  content: "";
+  position: absolute;
+  width: 1.25rem;
+  height: 100%;
+  right: -1.25rem;
+}
+.img::after {
+  left: -1.25rem;
+}
+.active {
+  width: 25vw;
+  transform: translateZ(17.375rem);
+  filter: inherit;
+  z-index: 1;
+  margin: 0 0.45vw;
+}

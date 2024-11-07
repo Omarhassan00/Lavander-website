@@ -1,0 +1,24 @@
+#carousel_o{height:85vh}#carousel_img{height:90%}#Text_l{background:linear-gradient(to top,red,transparent)}#Prev_R{border:6px solid #F4EAFF}#Next_L{border:6px solid #F4EAFF}
+@media (max-width: 600px) {
+  .css-10xrr17-MuiImageListItem-root .MuiImageListItem-img {
+    object-fit: fill !important;
+  }
+  .css-1u169s7-MuiList-root {
+    width: 390px !important;
+    height: 390px !important;
+    display: grid !important;
+    place-items: center !important;
+    place-content: center !important;
+  }
+  .css-igv6l8-MuiListItem-root {
+    width: 95% !important;
+}
+  .css-10xrr17-MuiImageListItem-root {
+    height: auto !important;
+    width: 100% !important;
+  }
+  .cont-fet{
+    padding-left: 1rem !important;
+    padding-right: 4rem !important;
+  }
+}
